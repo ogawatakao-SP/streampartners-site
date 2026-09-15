@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Stream Partners（小川隆生）— 中小オーナー企業の社長に対する「社外経営企画」。中期計画・管理体制・事業承継・M&A・幹部育成・DX/AI活用まで、意思決定の設計・レビュー・進捗管理を月額リテイナーで少数だけお受けします。初回1時間は無料。">
+<meta property="og:title" content="Stream Partners｜経営に、よい流れを。">
+<meta property="og:description" content="中小オーナー企業向けの社外経営企画。初回1時間の無料相談を承ります。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23f01f1f'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M6 13c5-5 9 5 14 0s9 5 14 0'/%3E%3Cpath d='M6 21c5-5 9 5 14 0s9 5 14 0'/%3E%3Cpath d='M6 29c5-5 9 5 14 0s9 5 14 0'/%3E%3C/g%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Stream Partners｜経営に、よい流れを。中小オーナー企業の社外経営企画</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<style>
+:root{
+  --bg:#ffffff;
+  --gray:#efefef;
+  --gray2:#d9dede;
+  --ink:#111111;
+  --muted:#555;
+  --p1:#ff1e1e;   /* primary gradient start */
+  --p2:#ff6b6b;   /* primary gradient end   */
+  --p:#f01f1f;    /* solid primary */
+  --dark:#3d3d3d;
+  --go:#22c55e;
+  --line:rgba(0,0,0,.14);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#ffffff; } }
+:root[data-theme="dark"]{ --bg:#ffffff; }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic Pro",メイリオ,sans-serif;font-size:14px;line-height:2;font-weight:500;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.en{font-family:Poppins,sans-serif}
+.page{display:none}.page.active{display:block}
+.grad{background:linear-gradient(90deg,var(--p1),var(--p2))}
+.gtext{background:linear-gradient(90deg,var(--p1),var(--p2) 70%,rgba(255,120,120,.55));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;height:calc(64px + env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);display:flex;align-items:center;justify-content:space-between;color:#fff;background:linear-gradient(90deg,var(--p1),var(--p2));box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.hdr .logo{display:flex;align-items:center;gap:10px;padding-left:56px;font-family:Poppins,sans-serif;font-weight:700;font-size:20px;letter-spacing:.14em;line-height:1}
+.hdr .logo small{font-size:9px;letter-spacing:.3em;font-weight:500;display:block;opacity:.9}
+.hdr .logo svg{width:30px;height:30px}
+.nav{display:flex;align-items:stretch;height:100%}
+.nav .links{display:flex;align-items:center;gap:26px;padding:0 20px;font-family:Poppins,sans-serif;font-weight:600;font-size:15px;letter-spacing:.02em}
+.nav .links a{opacity:.95;border-bottom:2px solid transparent}
+.nav .links a:hover,.nav .links a.current{border-bottom-color:#fff}
+.nav .sq{display:flex;align-items:center;padding:0 22px;font-size:13px;font-weight:700;letter-spacing:.06em;color:#fff}
+.nav .sq.dark{background:var(--dark)}
+.nav .sq.red{background:var(--p)}
+.menu-btn{display:none;background:none;border:0;color:#fff;font:600 13px Poppins,sans-serif;letter-spacing:.2em;padding:0 20px;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff;padding:calc(120px + env(safe-area-inset-top,0px)) 0 0;overflow:hidden}
+.hero .inner{display:grid;grid-template-columns:40% 1fr;gap:0;align-items:start;position:relative;z-index:2}
+.hero .text{padding:0 40px 60px 56px;position:relative}
+.hero .text::before{content:"";position:absolute;left:56px;top:-30px;width:1px;height:70px;background:rgba(255,255,255,.45)}
+.hero .arcs{position:absolute;left:-40px;top:-40px;width:520px;height:520px;pointer-events:none;opacity:.55}
+.hero .quote{font-family:Poppins,sans-serif;font-size:16px;font-weight:500;line-height:1.5;margin-bottom:24px;padding-left:22px;position:relative}
+.hero .quote::before{content:"";position:absolute;left:0;top:10px;width:14px;height:1px;background:#fff}
+.hero h1{font-size:clamp(28px,2.7vw,40px);font-weight:900;line-height:1.35;letter-spacing:.04em;margin-bottom:26px}
+.hero .lead{font-size:14px;font-weight:700;line-height:2;max-width:38ch;margin-bottom:34px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.b{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:190px;padding:14px 26px;font-size:13px;font-weight:700;letter-spacing:.06em;color:#fff;background:var(--dark);border:0;cursor:pointer;font-family:inherit;transition:filter .2s}
+.b:hover{filter:brightness(1.12)}
+.b.go{background:var(--go)}
+.b.red{background:var(--p)}
+.b.line{position:relative;padding-right:60px}
+.b.line::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:1px;background:currentColor}
+.hero .visual{position:relative;height:520px;overflow:hidden;background:#123}
+canvas[data-water]{position:absolute;inset:0;width:100%;height:100%;display:block}
+.marquee{position:relative;height:200px;overflow:hidden;margin-top:-10px}
+.marquee::before{content:"";position:absolute;inset:0 0 50% 0;background:linear-gradient(90deg,var(--p1),var(--p2))}
+.marquee::after{content:"";position:absolute;inset:50% 0 0 0;background:var(--gray)}
+.marquee .track{position:absolute;inset:0;display:flex;align-items:center;white-space:nowrap;font-family:Poppins,sans-serif;font-weight:700;font-size:210px;line-height:1;letter-spacing:.02em;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.85);z-index:1;animation:mq 40s linear infinite}
+.marquee .track span{padding-right:.4em}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+.sec{position:relative;padding:110px 0}
+.sec.gray{background:var(--gray)}
+.sec.split::after{content:"";position:absolute;top:0;bottom:0;right:0;width:30%;background:var(--gray2);z-index:0}
+.sec.split.gray::after{background:#fff}
+.c{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 56px}
+.ttl{margin-bottom:46px}
+.ttl .big{font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(48px,6vw,84px);line-height:1;letter-spacing:.02em}
+.ttl .sub{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;margin-top:6px}
+.ttl .sub::before{content:"";width:14px;height:1px;background:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.two h2{font-size:clamp(22px,2.2vw,28px);font-weight:900;line-height:1.6;margin-bottom:22px}
+.two .body{font-size:13.5px;font-weight:700;line-height:2.1;color:#222;display:flex;flex-direction:column;gap:12px;margin-bottom:34px}
+.frame{position:relative;height:420px;overflow:hidden;background:#123}
+.rows{border-top:1px solid var(--line);margin-top:20px}
+.row{display:grid;grid-template-columns:1.1fr 1fr 90px;gap:30px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:19px;font-weight:900;margin-bottom:8px}
+.row p{font-size:12.5px;font-weight:700;line-height:1.9;color:#333}
+.row .menu{font-size:11px;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.row .menu::before{content:"";width:12px;height:1px;background:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:11px;font-weight:700;background:var(--gray);padding:4px 12px;border-radius:40px}
+.sec.gray .chip{background:#fff}
+.circ{width:42px;height:42px;border-radius:50%;background:var(--p);color:#fff;display:grid;place-items:center;font-family:Poppins,sans-serif;font-weight:700;justify-self:end;transition:transform .2s}
+.circ:hover{transform:scale(1.08)}
+.row .arrow{justify-self:end;display:flex;align-items:center;gap:22px;position:relative;padding-left:30px;border-left:1px solid var(--line);height:70px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:#fff;padding:32px 30px;border-top:4px solid var(--p);display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 30px rgba(0,0,0,.05)}
+.sec:not(.gray) .card{background:var(--gray)}
+.card .tag{font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;color:var(--p)}
+.card h3{font-size:18px;font-weight:900}
+.card .price{font-family:Poppins,sans-serif;font-weight:600;font-size:32px;line-height:1.2;font-variant-numeric:tabular-nums}
+.card .price small{font-family:inherit;font-size:12px;font-weight:700;margin-left:4px}
+.card p{font-size:12.5px;font-weight:700;line-height:1.9;color:#333}
+.card ul{font-size:12.5px;font-weight:700;line-height:2;color:#222}
+.nlist{border-top:1px solid var(--line)}
+.nlist li{display:grid;grid-template-columns:110px 90px 1fr 42px;gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:700}
+.nlist time{font-family:Poppins,sans-serif;font-weight:600;font-size:13px;color:var(--p)}
+.nlist .chip{justify-self:start}
+.nlist .ex{display:block;font-size:12px;font-weight:500;color:#444;margin-top:2px}
+.banner{position:relative;height:300px;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;overflow:hidden;background:#123}
+.banner::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.42);z-index:1}
+.banner .t{position:relative;z-index:2}
+.banner .big{font-family:Poppins,sans-serif;font-weight:700;font-size:38px;line-height:1.1}
+.banner .sub{font-size:13px;font-weight:700;display:flex;justify-content:center;align-items:center;gap:8px;margin-top:6px}
+.banner .sub::before{content:"";width:12px;height:1px;background:#fff}
+.dual{display:grid;grid-template-columns:1fr 1fr;background:#cfd6d6}
+.dual > a{display:grid;grid-template-columns:1fr 46px;gap:20px;align-items:center;padding:44px 56px;border-right:1px solid rgba(0,0,0,.12)}
+.dual > a:last-child{border-right:0}
+.dual .big{font-family:Poppins,sans-serif;font-weight:700;font-size:30px;line-height:1.1}
+.dual .sub{font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;margin:4px 0 14px}
+.dual .sub::before{content:"";width:12px;height:1px;background:var(--ink)}
+.dual p{font-size:12.5px;font-weight:700}
+.dual .circ{align-self:start}
+
+/* ---------- sub pages ---------- */
+.subhero{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff;padding:calc(150px + env(safe-area-inset-top,0px)) 0 70px;position:relative;overflow:hidden}
+.subhero .arcs{position:absolute;right:-60px;top:-80px;width:600px;height:600px;opacity:.5;pointer-events:none}
+.subhero .big{font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(48px,6vw,84px);line-height:1;letter-spacing:.02em}
+.subhero .sub{font-size:14px;font-weight:700;margin-top:8px;display:flex;align-items:center;gap:10px}
+.subhero .sub::before{content:"";width:14px;height:1px;background:#fff}
+.subhero h1{font-size:clamp(22px,2.4vw,32px);font-weight:900;margin-top:34px;line-height:1.5}
+.prose{max-width:66ch;font-size:14px;font-weight:700;line-height:2.1;color:#222;display:flex;flex-direction:column;gap:16px}
+.h2{font-size:clamp(22px,2.2vw,28px);font-weight:900;line-height:1.6;margin-bottom:24px}
+.h3{font-size:17px;font-weight:900;margin-bottom:8px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.step{background:#fff;padding:28px 26px;position:relative;border-left:3px solid var(--p)}
+.sec:not(.gray) .step{background:var(--gray)}
+.step .k{font-family:Poppins,sans-serif;font-weight:700;font-size:26px;color:var(--p);line-height:1;margin-bottom:12px}
+.step h3{font-size:15px;font-weight:900;margin-bottom:6px}
+.step p{font-size:12.5px;font-weight:700;line-height:1.9;color:#333}
+.timeline{border-top:1px solid var(--line);max-width:820px}
+.timeline li{display:grid;grid-template-columns:110px 1fr;gap:22px;padding:14px 0;border-bottom:1px solid var(--line);font-size:13.5px;font-weight:700;line-height:1.8}
+.timeline time{font-family:Poppins,sans-serif;font-weight:600;color:var(--p);font-variant-numeric:tabular-nums}
+.tbl-scroll{overflow-x:auto}
+.tbl{width:100%;max-width:900px;border-collapse:collapse;font-size:13px;font-weight:700;background:#fff}
+.tbl th,.tbl td{border:1px solid var(--line);padding:13px 16px;text-align:left;vertical-align:top;line-height:1.7}
+.tbl th{background:var(--gray);width:24%}
+.tbl td.c{text-align:center;color:var(--p)}
+.faq{max-width:820px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-size:14.5px;font-weight:900;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font-family:Poppins,sans-serif;color:var(--p);font-weight:700}
+.faq details[open] summary::after{content:"−"}
+.faq p{padding:0 0 18px;font-size:13px;font-weight:700;color:#333;line-height:1.9}
+.cform{max-width:600px;display:flex;flex-direction:column;gap:16px}
+.cform label{font-size:12px;font-weight:700;letter-spacing:.06em;display:flex;flex-direction:column;gap:6px}
+.cform input,.cform textarea,.cform select{width:100%;border:1px solid var(--line);background:#fff;font:inherit;font-size:14px;padding:12px 14px}
+.cform textarea{min-height:150px;resize:vertical}
+.cform input:focus,.cform textarea:focus,.cform select:focus,.b:focus-visible,.nav a:focus-visible{outline:2px solid var(--p);outline-offset:2px}
+.note{font-size:12px;font-weight:700;color:#555}
+.pill{display:inline-block;font-family:Poppins,sans-serif;font-weight:600;font-size:11px;letter-spacing:.2em;color:var(--p);border:1px solid var(--p);padding:2px 12px;border-radius:40px}
+
+/* ---------- footer ---------- */
+.footer{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff;padding:60px 56px 30px;position:relative}
+.footer .top{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start}
+.footer .logo{font-family:Poppins,sans-serif;font-weight:700;font-size:26px;letter-spacing:.14em;display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.footer .logo svg{width:38px;height:38px}
+.footer .logo small{display:block;font-size:10px;letter-spacing:.3em;font-weight:500}
+.footer address{font-style:normal;font-size:12.5px;font-weight:700;line-height:2}
+.footer .cols{display:flex;gap:40px;font-family:Poppins,sans-serif;font-weight:600;font-size:14px}
+.footer .cols ul{display:flex;flex-direction:column;gap:6px}
+.footer .cols li.jp{font-family:"Noto Sans JP",sans-serif;font-size:11px;font-weight:700;padding-left:10px}
+.footer .bottom{display:flex;justify-content:space-between;align-items:center;margin-top:50px;font-size:11px;font-weight:700}
+.footer .up{position:absolute;right:56px;bottom:100px;width:34px;height:34px;border-radius:50%;background:#fff;color:var(--p);display:grid;place-items:center;font-family:Poppins,sans-serif;font-weight:700}
+
+@media (max-width:980px){
+  .nav .links{display:none}
+  .menu-btn{display:block}
+  .hdr .logo{padding-left:20px}
+  .hdr.open .links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--p);padding:20px 24px;gap:14px}
+  .hero .inner{grid-template-columns:1fr}
+  .hero .text{padding:0 24px 40px}
+  .hero .text::before{left:24px}
+  .hero .visual{height:320px}
+  .marquee .track{font-size:120px}
+  .marquee{height:120px}
+  .c{padding:0 24px}
+  .two{grid-template-columns:1fr;gap:34px}
+  .frame{height:280px}
+  .row{grid-template-columns:1fr;gap:14px}
+  .row .arrow{border-left:0;padding-left:0;height:auto;justify-self:start}
+  .sec.split::after{display:none}
+  .dual{grid-template-columns:1fr}
+  .dual > a{padding:34px 24px;border-right:0;border-bottom:1px solid rgba(0,0,0,.12)}
+  .footer{padding:50px 24px 30px}
+  .footer .top{grid-template-columns:1fr}
+  .footer .up{right:24px}
+  .nlist li{grid-template-columns:1fr;gap:6px}
+  .timeline li{grid-template-columns:1fr;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee .track{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- ===== header ===== -->
+<header class="hdr" id="hdr">
+  <a class="logo" href="#/" aria-label="Stream Partners">
+    <svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M5 13c5-5 10 5 15 0s10 5 15 0"/><path d="M5 22c5-5 10 5 15 0s10 5 15 0"/><path d="M5 31c5-5 10 5 15 0s10 5 15 0"/></svg>
+    <span>STREAM<small>PARTNERS</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="メニュー">MENU</button>
+  <nav class="nav" id="nav">
+    <div class="links">
+      <a href="#/story" data-route="story">STORY</a>
+      <a href="#/service" data-route="service">SERVICE</a>
+      <a href="#/plans" data-route="plans">PLANS</a>
+      <a href="#/profile" data-route="profile">PROFILE</a>
+      <a href="#/news" data-route="news">NEWS</a>
+    </div>
+    <a class="sq dark" href="#/contact#partner">紹介パートナー ↗</a>
+    <a class="sq red" href="#/contact" data-route="contact">無料相談</a>
+  </nav>
+</header>
+
+<!-- ======================================================= HOME ======================================================= -->
+<main class="page active" data-page="home">
+<section class="hero">
+  <svg class="arcs" viewBox="0 0 520 520" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1" aria-hidden="true"><circle cx="260" cy="260" r="240"/><circle cx="260" cy="260" r="170"/><circle cx="260" cy="260" r="100"/><path d="M20 260H500M260 20V500"/></svg>
+  <div class="inner">
+    <div class="text">
+      <p class="quote">"Bringing good flow<br>to management.</p>
+      <h1>Stream Partners<br>中小オーナー企業の<br>社外経営企画として、<br>経営によい流れを。</h1>
+      <p class="lead">社長の隣で、数字の先を一緒に考える。実務の代行ではなく、意思決定の設計・レビュー・進捗管理を、月額リテイナーで少数だけお受けしています。</p>
+      <div class="btns">
+        <a class="b" href="#/service">サービスを見る ↗</a>
+        <a class="b go" href="#/contact">無料相談を申し込む</a>
+      </div>
+    </div>
+    <div class="visual"><canvas data-water="stream" aria-hidden="true"></canvas></div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="track"><span>STRATEGIC PLANNING</span><span>MANAGEMENT FLOW</span><span>STRATEGIC PLANNING</span><span>MANAGEMENT FLOW</span></div></div>
+</section>
+
+<section class="sec gray" style="padding-top:60px">
+  <div class="c">
+    <div class="two">
+      <div>
+        <div class="ttl"><div class="big gtext">STORY</div><div class="sub">私たちについて</div></div>
+        <h2>社長の隣で、<br>数字の先を考える。</h2>
+        <div class="body">
+          <p>中小オーナー企業の社長は、ほとんどの意思決定を一人で下しています。「数字は分かった、で、どうすればいい？」という問いに一緒に向き合う相手は、社内にはなかなかいません。</p>
+          <p>Stream Partnersは、上場企業なら経営企画室が担う機能を、社外から月額のリテイナーで提供します。</p>
+        </div>
+        <a class="b red line" href="#/story">ストーリーを見る</a>
+      </div>
+      <div class="frame"><canvas data-water="river" aria-hidden="true"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec split">
+  <div class="c">
+    <div class="ttl"><div class="big gtext">SERVICE</div><div class="sub">サービス内容</div></div>
+    <div class="two" style="align-items:start">
+      <div>
+        <h2>社外経営企画室、<br>という選択肢。</h2>
+        <div class="body">
+          <p>中期計画、管理体制、事業承継、M&amp;A、幹部育成、DX・AI活用。<br>意思決定の設計・レビュー・進捗管理を、社長の側で担います。実作業の代行、税務・会計の領域は含みません。</p>
+        </div>
+        <a class="b red line" href="#/service">サービス内容を見る</a>
+      </div>
+      <svg viewBox="0 0 420 300" style="width:100%;max-width:420px;justify-self:center" aria-hidden="true">
+        <defs><marker id="m" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#111"/></marker></defs>
+        <circle cx="210" cy="70" r="60" fill="none" stroke="#111" stroke-width="1.2"/>
+        <circle cx="110" cy="220" r="60" fill="none" stroke="#111" stroke-width="1.2"/>
+        <circle cx="310" cy="220" r="60" fill="none" stroke="#111" stroke-width="1.2"/>
+        <path d="M150 190 L190 120 M260 120 L300 190 M170 220 L250 220" stroke="#bbb" stroke-width="1"/>
+        <polyline points="185,175 200,160 212,168 232,140" fill="none" stroke="#111" stroke-width="1.2" marker-start="url(#m)" marker-end="url(#m)"/>
+        <text x="210" y="66" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13">Decision</text><text x="210" y="84" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13">Design</text>
+        <text x="110" y="216" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13">Review</text><text x="110" y="234" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13">&amp; Advice</text>
+        <text x="310" y="216" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13">Progress</text><text x="310" y="234" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13">Management</text>
+      </svg>
+    </div>
+    <div class="rows">
+      <div class="row">
+        <div><h3>中期計画・事業計画</h3><p>社長の「こうしたい」を計画の言葉に置き換え、金融機関や社内に説明できる形にします。</p></div>
+        <div><div class="menu">提供メニュー</div><div class="chips"><span class="chip">中期計画の策定</span><span class="chip">単年の事業計画</span><span class="chip">金融機関・株主への説明</span></div></div>
+        <div class="arrow"><a class="circ" href="#/service">→</a></div>
+      </div>
+      <div class="row">
+        <div><h3>管理体制・IPO準備</h3><p>月次決算の早期化、予実管理、規程・権限の整理から、上場準備の内部管理体制まで。</p></div>
+        <div><div class="menu">提供メニュー</div><div class="chips"><span class="chip">予実管理の設計</span><span class="chip">規程・権限整理</span><span class="chip">IPO準備</span></div></div>
+        <div class="arrow"><a class="circ" href="#/service">→</a></div>
+      </div>
+      <div class="row">
+        <div><h3>事業承継・M&amp;A・新規投資</h3><p>売るべきか続けるべきか、提示された案件の見方、成約後のPMI、新規投資の判断まで社長側に立って整理します。</p></div>
+        <div><div class="menu">提供メニュー</div><div class="chips"><span class="chip">M&amp;A案件の評価</span><span class="chip">事業承継の整理</span><span class="chip">新規事業・投資判断</span></div></div>
+        <div class="arrow"><a class="circ" href="#/service">→</a></div>
+      </div>
+      <div class="row">
+        <div><h3>幹部育成・構想の推進・DX/AI活用</h3><p>右腕に任せる範囲の設計、形になっていない構想を止まらず進める仕組み、どの業務からAIを入れるかの判断。</p></div>
+        <div><div class="menu">提供メニュー</div><div class="chips"><span class="chip">右腕・幹部の育成</span><span class="chip">経営会議の設計</span><span class="chip">DX・AI活用</span></div></div>
+        <div class="arrow"><a class="circ" href="#/service">→</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gray">
+  <div class="c">
+    <div class="ttl"><div class="big gtext">PLANS</div><div class="sub">料金プラン</div></div>
+    <div class="two" style="align-items:start;margin-bottom:40px">
+      <div>
+        <h2>月額リテイナーで、<br>少数だけ。</h2>
+        <div class="body"><p>1社あたり月8〜10時間。経営会議・隔週ミーティング・チャットを含め、社長の意思決定に集中して関わります。契約はまず3ヶ月から。</p></div>
+        <a class="b red line" href="#/plans">プランの詳細を見る</a>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="tag">PLAN A</span><h3>経営伴走プラン</h3><div class="price">¥200,000<small>／月（税別）</small></div><p>隔週ミーティング＋チャット相談。重要な意思決定のレビューと壁打ち。</p></div>
+      <div class="card"><span class="tag">PLAN B</span><h3>社外経営企画室プラン</h3><div class="price">¥300,000<small>／月（税別）</small></div><p>経営会議への参加＋計画・体制の設計。進捗管理まで社外の経営企画として担当。</p></div>
+      <div class="card"><span class="tag">SPOT</span><h3>スポット顧問</h3><div class="price">別途<small>ご相談</small></div><p>M&amp;A案件の評価、資金調達の資料づくりなど、期間と論点を区切った関わり方。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec split">
+  <div class="c">
+    <div class="two">
+      <div class="frame"><canvas data-water="sea" aria-hidden="true"></canvas></div>
+      <div>
+        <div class="ttl"><div class="big gtext">PROFILE</div><div class="sub">代表について</div></div>
+        <h2>上場準備から事業売却まで、<br>自分で決めてきた経験。</h2>
+        <div class="body">
+          <p>小川 隆生。ベストワンドットコム（東証グロース）専務取締役。経営管理本部長として上場を主導し、CFOとして事業売却も経験。自ら起業した経験から、オーナー経営者の目線で考えます。</p>
+        </div>
+        <a class="b red line" href="#/profile">プロフィールを見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gray">
+  <div class="c">
+    <div class="ttl"><div class="big gtext">NEWS</div><div class="sub">お知らせ</div></div>
+    <ul class="nlist">
+      <li><time>2026.09.14</time><span class="chip">お知らせ</span><span>Stream Partners のウェブサイトを公開しました</span><a class="circ" href="#/news">→</a></li>
+      <li><time>2026.09.01</time><span class="chip">サービス</span><span>税理士・会計事務所、M&amp;A仲介向けの紹介パートナー制度を開始</span><a class="circ" href="#/news">→</a></li>
+      <li><time>2026.05.01</time><span class="chip">実績</span><span>出張洗車事業（カーケアジャパン）のアドバイザーに就任</span><a class="circ" href="#/news">→</a></li>
+    </ul>
+    <div style="margin-top:30px"><a class="b red line" href="#/news">お知らせ一覧</a></div>
+  </div>
+</section>
+
+<section class="banner">
+  <canvas data-water="stream2" aria-hidden="true"></canvas>
+  <div class="t"><div class="big">CONSULTATION</div><div class="sub">初回1時間、無料でご相談いただけます</div></div>
+</section>
+<section class="dual">
+  <a href="#/contact"><div><div class="big">CONTACT</div><div class="sub">無料相談・お問い合わせ</div><p>会社の概要と、いま気になっていることを一言で。2営業日以内にご連絡します。</p></div><span class="circ">→</span></a>
+  <a href="#/contact#partner"><div><div class="big">PARTNERS</div><div class="sub">紹介パートナーの方へ</div><p>税理士・会計事務所、M&amp;A仲介・FAの皆さまへ。顧問先・お客様の相談先の一つとして。</p></div><span class="circ">→</span></a>
+</section>
+</main>
+
+<!-- ======================================================= STORY ======================================================= -->
+<main class="page" data-page="story">
+<section class="subhero">
+  <svg class="arcs" viewBox="0 0 600 600" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1" aria-hidden="true"><circle cx="300" cy="300" r="280"/><circle cx="300" cy="300" r="200"/><circle cx="300" cy="300" r="120"/></svg>
+  <div class="c"><div class="big">STORY</div><div class="sub">私たちについて</div><h1>社長の隣で、数字の先を考える</h1></div>
+</section>
+<section class="sec"><div class="c">
+  <h2 class="h2">なぜ、社外経営企画なのか</h2>
+  <div class="prose">
+    <p>中小オーナー企業の社長は、ほとんどの意思決定を一人で下しています。数字は顧問税理士から上がってくる。現場は部門長が見ている。けれど「数字は分かった、で、どうすればいい？」という問いに一緒に向き合う相手は、社内にはなかなかいません。</p>
+    <p>中期計画を作りたい。後継者や事業承継をどうするか。管理部門を整えたい。M&amp;Aの話が来たがどう考えればいいか。こうした「数字の先」の意思決定は、上場企業であれば経営企画室が担う仕事です。Stream Partnersは、その機能を社外から、月額のリテイナーで提供します。</p>
+  </div>
+</div></section>
+<section class="sec gray"><div class="c">
+  <div class="ttl"><div class="big gtext">PHILOSOPHY</div><div class="sub">考え方</div></div>
+  <h2 class="h2">よい流れとは、社長が決めるべきことを、<br>決めるべきタイミングで決められている状態。</h2>
+  <div class="prose"><p>川は、堰き止められると濁り、流れていれば澄んでいきます。経営も同じで、決めきれずに溜まった課題が、組織の見通しを悪くします。私たちの仕事は、意思決定の流れを整えること。判断材料を揃え、選択肢を並べ、決めた後の進捗を追い続けます。</p></div>
+</div></section>
+<section class="sec"><div class="c">
+  <div class="ttl"><div class="big gtext">VALUES</div><div class="sub">大切にしていること</div></div>
+  <div class="cards">
+    <div class="card"><h3>社長の側に立つ</h3><p>仲介や紹介料をいただく立場ではなく、社長の意思決定を前に進めるためだけに動きます。</p></div>
+    <div class="card"><h3>実務の代行はしない</h3><p>設計・レビュー・進捗管理までを担い、実行は社内のメンバーが前に出られる形にします。</p></div>
+    <div class="card"><h3>少数だけ、深く</h3><p>1社あたり月8〜10時間。同時にお受けするのは数社に限り、経営会議に腰を据えて関わります。</p></div>
+    <div class="card"><h3>経験から、率直に</h3><p>上場準備、事業売却、起業。自分で意思決定してきた経験があるからこそ、言いにくいことも率直に。</p></div>
+  </div>
+</div></section>
+<section class="sec gray"><div class="c">
+  <div class="ttl"><div class="big gtext">NAME</div><div class="sub">名前の由来</div></div>
+  <div class="prose"><p>Streamは「流れ」。せせらぎから大河へ、そして海へ。企業の成長のどの段階にも、その時々の流れがあります。私たちは経営の流れを変える主役ではなく、流れをよくするために隣にいるパートナーでありたい。そんな意味を込めています。</p></div>
+</div></section>
+<section class="dual">
+  <a href="#/contact"><div><div class="big">CONTACT</div><div class="sub">まずは15分ほどお話ししませんか</div><p>初回1時間の無料相談も承ります。いつもの相談相手のご同席も歓迎です。</p></div><span class="circ">→</span></a>
+  <a href="#/service"><div><div class="big">SERVICE</div><div class="sub">サービス内容を見る</div><p>意思決定の設計・レビュー・進捗管理。9つの領域と関わり方。</p></div><span class="circ">→</span></a>
+</section>
+</main>
+
+<!-- ======================================================= SERVICE ======================================================= -->
+<main class="page" data-page="service">
+<section class="subhero">
+  <svg class="arcs" viewBox="0 0 600 600" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1" aria-hidden="true"><circle cx="300" cy="300" r="280"/><circle cx="300" cy="300" r="200"/><circle cx="300" cy="300" r="120"/></svg>
+  <div class="c"><div class="big">SERVICE</div><div class="sub">サービス内容</div><h1>社外経営企画室、という選択肢</h1></div>
+</section>
+<section class="sec"><div class="c">
+  <h2 class="h2">社長の意思決定を、設計・レビュー・進捗管理まで</h2>
+  <div class="prose"><p>経営企画室の仕事は、社長が決めるための材料を揃え、決めたことが実行されるまでを追い続けることです。Stream Partnersは、この機能を社外から担います。実務の代行や、税務・会計の領域には踏み込みません。顧問税理士や社内のメンバーと役割を分け、社長の隣で「決める」を支えます。</p></div>
+</div></section>
+<section class="sec gray"><div class="c">
+  <div class="ttl"><div class="big gtext">DOMAINS</div><div class="sub">主な領域</div></div>
+  <div class="cards">
+    <div class="card"><h3>中期計画・事業計画</h3><p>3〜5年の中期計画と、単年の事業計画。社長の「こうしたい」を計画の言葉に置き換え、金融機関や社内に説明できる形にします。</p></div>
+    <div class="card"><h3>管理体制の整備・IPO準備</h3><p>月次決算の早期化、予実管理、規程・権限の整理。上場を目指す場合は、内部管理体制の構築から主幹事・監査法人との対話まで。</p></div>
+    <div class="card"><h3>事業承継・M&amp;A対応</h3><p>売るべきか、続けるべきか、IPOを目指すべきか。仲介・FAから提示された案件の見方、事業計画の蓋然性、成約後のPMIまで。</p></div>
+    <div class="card"><h3>経営会議の設計・進捗管理</h3><p>会議体とアジェンダの設計、KPIの定義、決めたことのフォロー。意思決定が溜まらない仕組みを社内に残します。</p></div>
+    <div class="card"><h3>右腕・幹部の育成</h3><p>「社長しか判断できない」状態からの脱却。幹部に任せる範囲の設計、任せた後の壁打ち相手、社長と幹部のあいだの翻訳役。</p></div>
+    <div class="card"><h3>形になっていない構想の推進</h3><p>「新しいことをやりたい」「あの件を何とかしたい」を、担当・期限・判断ポイントのある形に落とし、止まらないように進めます。</p></div>
+    <div class="card"><h3>金融機関・株主への説明</h3><p>借入や増資の際の事業計画の見せ方、銀行・投資家との定期的な対話。社長の言葉を、相手に伝わる資料と説明に整えます。</p></div>
+    <div class="card"><h3>新規事業・投資の判断</h3><p>出店、設備投資、新規事業への参入。やるか・やらないか・いつやるかを、数字と現場の両面から一緒に判断します。</p></div>
+    <div class="card"><h3>DX・AI活用</h3><p>「AIで何かやれ」で止まっている状態から、どの業務から手をつけるかを決め、実際に動く仕組みまで伴走。ツール選定と社内への定着まで。</p></div>
+  </div>
+</div></section>
+<section class="sec"><div class="c">
+  <div class="ttl"><div class="big gtext">FLOW</div><div class="sub">関わり方</div></div>
+  <div class="steps">
+    <div class="step"><div class="k">01</div><h3>初回相談（無料・1時間）</h3><p>いま抱えている課題と会社の状況を伺います。お受けできるかどうかも、この場で率直にお伝えします。</p></div>
+    <div class="step"><div class="k">02</div><h3>論点の整理と提案</h3><p>3ヶ月で何を決め、何を動かすか。取り組む論点とプランを1枚にまとめてご提案します。</p></div>
+    <div class="step"><div class="k">03</div><h3>3ヶ月の伴走</h3><p>隔週のミーティングとチャット、必要に応じて経営会議への参加。決めたことの進捗を追い続けます。</p></div>
+    <div class="step"><div class="k">04</div><h3>継続の判断</h3><p>3ヶ月ごとに、続けるか、範囲を変えるか、終えるかをご一緒に判断します。</p></div>
+  </div>
+</div></section>
+<section class="sec gray"><div class="c">
+  <div class="ttl"><div class="big gtext">NOT INCLUDED</div><div class="sub">お受けしていないこと</div></div>
+  <div class="prose"><p>資料作成や事務作業の代行、税務・会計・法務の専門業務、営業代行や採用代行はお受けしていません。また、旅行・クルーズ・宿泊関連の企業様は、本業との関係から原則お受けしておりません。初回相談の冒頭で、必ずこちらから確認いたします。</p></div>
+</div></section>
+<section class="dual">
+  <a href="#/plans"><div><div class="big">PLANS</div><div class="sub">料金と契約について</div><p>2つのプランをご用意しています。契約はまず3ヶ月から。</p></div><span class="circ">→</span></a>
+  <a href="#/contact"><div><div class="big">CONTACT</div><div class="sub">無料相談を申し込む</div><p>初回1時間は無料。会社の状況を伺ったうえで、率直にご提案します。</p></div><span class="circ">→</span></a>
+</section>
+</main>
+
+<!-- ======================================================= PLANS ======================================================= -->
+<main class="page" data-page="plans">
+<section class="subhero">
+  <svg class="arcs" viewBox="0 0 600 600" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1" aria-hidden="true"><circle cx="300" cy="300" r="280"/><circle cx="300" cy="300" r="200"/><circle cx="300" cy="300" r="120"/></svg>
+  <div class="c"><div class="big">PLANS</div><div class="sub">料金プラン</div><h1>月額リテイナーで、少数だけ</h1></div>
+</section>
+<section class="sec"><div class="c">
+  <h2 class="h2">2つのプラン</h2>
+  <p class="note" style="margin-bottom:24px">いずれも税別。1社あたりの稼働は月8〜10時間を上限としています。</p>
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+    <div class="card"><span class="tag">PLAN A</span><h3>経営伴走プラン</h3><div class="price">¥200,000<small>／月</small></div><p>社長の壁打ち相手として、重要な意思決定を一緒に整理するプランです。</p><ul><li>・隔週1回のミーティング（60〜90分）</li><li>・チャットでの随時相談</li><li>・重要な意思決定・資料のレビュー</li><li>・四半期ごとの論点整理</li></ul></div>
+    <div class="card"><span class="tag">PLAN B</span><h3>社外経営企画室プラン</h3><div class="price">¥300,000<small>／月</small></div><p>経営会議に入り、計画と体制の設計から進捗管理までを社外の経営企画として担うプランです。</p><ul><li>・月1回の経営会議への参加</li><li>・隔週1回のミーティング＋チャット</li><li>・中期計画・管理体制・会議体の設計</li><li>・決めたことの進捗管理と社内への展開支援</li></ul></div>
+  </div>
+</div></section>
+<section class="sec gray"><div class="c">
+  <div class="ttl"><div class="big gtext">COMPARISON</div><div class="sub">プラン比較</div></div>
+  <div class="tbl-scroll"><table class="tbl">
+    <thead><tr><th></th><th>経営伴走プラン</th><th>社外経営企画室プラン</th></tr></thead>
+    <tbody>
+      <tr><th>月額（税別）</th><td>¥200,000</td><td>¥300,000</td></tr>
+      <tr><th>ミーティング</th><td>隔週1回</td><td>隔週1回＋月1回の経営会議</td></tr>
+      <tr><th>チャット相談</th><td class="c">○</td><td class="c">○</td></tr>
+      <tr><th>意思決定・資料のレビュー</th><td class="c">○</td><td class="c">○</td></tr>
+      <tr><th>計画・体制・会議体の設計</th><td class="c">—</td><td class="c">○</td></tr>
+      <tr><th>進捗管理・社内展開の支援</th><td class="c">—</td><td class="c">○</td></tr>
+      <tr><th>スポットの顧問料（M&amp;A対応など）</th><td>別途ご相談</td><td>別途ご相談</td></tr>
+      <tr><th>最低契約期間</th><td>3ヶ月</td><td>3ヶ月</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+<section class="sec"><div class="c">
+  <div class="ttl"><div class="big gtext">FAQ</div><div class="sub">よくあるご質問</div></div>
+  <div class="faq">
+    <details><summary>契約はいつから、どのくらいの期間ですか</summary><p>まず3ヶ月からお願いしています。3ヶ月ごとに、継続・範囲変更・終了をご一緒に判断します。</p></details>
+    <details><summary>月8〜10時間には何が含まれますか</summary><p>経営会議、隔週のミーティング、チャットでの相談、資料のレビューを含みます。資料制作そのものに使える時間は実質3〜5時間ほどのため、実作業は社内のメンバーにお願いする形になります。</p></details>
+    <details><summary>資料を代わりに作ってもらえますか</summary><p>設計とレビューは行いますが、制作の代行は基本領域に含みません。必要な場合はスポットで別途ご相談ください。</p></details>
+    <details><summary>お支払いはどのようになりますか</summary><p>月額の請求書払いです。個人事業としてお受けしているため、契約書・請求書は個人名義（屋号 Stream Partners）となります。</p></details>
+    <details><summary>どんな会社が対象ですか</summary><p>意思決定が速く、社長が直接判断される中小オーナー企業を主な対象としています。上場準備中のスタートアップ、事業承継やM&amp;Aを検討中の企業もお受けしています。旅行・クルーズ・宿泊関連の企業様は原則お受けしておりません。</p></details>
+  </div>
+</div></section>
+<section class="dual">
+  <a href="#/contact"><div><div class="big">CONTACT</div><div class="sub">どちらのプランが合うか、まずはご相談ください</div><p>初回1時間は無料です。会社の状況を伺ったうえで、率直にご提案します。</p></div><span class="circ">→</span></a>
+  <a href="#/service"><div><div class="big">SERVICE</div><div class="sub">サービス内容に戻る</div><p>9つの領域と、関わり方の4ステップ。</p></div><span class="circ">→</span></a>
+</section>
+</main>
+
+<!-- ======================================================= PROFILE ======================================================= -->
+<main class="page" data-page="profile">
+<section class="subhero">
+  <svg class="arcs" viewBox="0 0 600 600" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1" aria-hidden="true"><circle cx="300" cy="300" r="280"/><circle cx="300" cy="300" r="200"/><circle cx="300" cy="300" r="120"/></svg>
+  <div class="c"><div class="big">PROFILE</div><div class="sub">代表について</div><h1>上場準備から事業売却まで</h1></div>
+</section>
+<section class="sec"><div class="c">
+  <div class="two">
+    <div>
+      <h2 class="h2">小川 隆生</h2>
+      <p class="note" style="margin-bottom:18px">Stream Partners 代表　／　株式会社ベストワンドットコム 専務取締役</p>
+      <div class="prose">
+        <p>2005年リクルート入社。ベンチャー・リンクで外食事業のスーパーバイジングとFC加盟開発を経て、2009年にメディアキッチンを設立、代表取締役として自ら事業を立ち上げました。2014年にベストワンドットコムに入社し、経営企画部長、経営管理本部長として2018年の東証マザーズ上場を主導。その後、リーズンホワイ（現スペシャリスト・ドクターズ）では取締役CFOとして2事業のアフラック子会社への売却をリードし、ユーザーライクでは執行役員として事業開発と管理部門を支えました。2026年1月よりベストワンドットコム専務取締役（グループ戦略担当）。</p>
+        <p>個人として、中小オーナー企業の社長に対する社外経営企画の伴走を少数だけお受けしています。起業した経験があるからこそ、オーナー経営者が何に悩み、何を決めきれないのかが分かる。それが、この仕事をしている理由です。</p>
+      </div>
+    </div>
+    <div class="frame"><canvas data-water="sea" aria-hidden="true"></canvas></div>
+  </div>
+</div></section>
+<section class="sec gray"><div class="c">
+  <div class="ttl"><div class="big gtext">EXPERTISE</div><div class="sub">専門領域</div></div>
+  <div class="cards">
+    <div class="card"><h3>IPO・内部管理体制</h3><p>経営管理本部長として上場準備を1から10まで。内部管理体制の構築、主幹事・監査法人との対話、上場後のIR。</p></div>
+    <div class="card"><h3>M&amp;A・事業売却</h3><p>CFOとして事業売却をリード。現在は買い手側のプロジェクトオーナーとして案件を見ており、売り手・買い手どちらの立場も分かります。</p></div>
+    <div class="card"><h3>経営企画・中期計画</h3><p>グループ戦略、中期計画、組織体制の設計。計画を「作る」だけでなく、経営会議で回し続ける仕組みまで。</p></div>
+    <div class="card"><h3>事業開発</h3><p>自らの起業、FC加盟開発、新規事業のbizdev。数字の裏側にある現場の動き方から考えます。</p></div>
+  </div>
+</div></section>
+<section class="sec"><div class="c">
+  <div class="ttl"><div class="big gtext">CAREER</div><div class="sub">経歴</div></div>
+  <ul class="timeline">
+    <li><time>2005.04</time><span>株式会社リクルート 入社</span></li>
+    <li><time>2007.07</time><span>株式会社ベンチャー・リンク 入社（外食事業のスーパーバイジング、FC加盟開発）</span></li>
+    <li><time>2009.01</time><span>株式会社メディアキッチン 設立、代表取締役</span></li>
+    <li><time>2013.01</time><span>株式会社幕末（現イシン）入社</span></li>
+    <li><time>2014.02</time><span>株式会社ベストワンドットコム 入社、同年8月 取締役経営企画部長</span></li>
+    <li><time>2016.07</time><span>株式会社ファイブスタークルーズ 取締役（現任）</span></li>
+    <li><time>2016.10</time><span>ベストワンドットコム 取締役経営管理本部長 兼 経営企画部長</span></li>
+    <li><time>2018.04</time><span>ベストワンドットコム 東証マザーズ上場（経営管理本部長として主導）</span></li>
+    <li><time>2019.11</time><span>株式会社クランチスタイル（現ユーザーライク）監査役</span></li>
+    <li><time>2020.08</time><span>株式会社リーズンホワイ（現スペシャリスト・ドクターズ）取締役経営管理部長。CFOとして2事業の売却をリード</span></li>
+    <li><time>2021.09</time><span>株式会社ユーザーライク 執行役員（現・非常勤監査役）</span></li>
+    <li><time>2026.01</time><span>株式会社ベストワンドットコム 専務取締役（グループ戦略担当）</span></li>
+    <li><time>2026.05</time><span>Stream Partners として個人での経営伴走を開始</span></li>
+  </ul>
+</div></section>
+<section class="sec gray"><div class="c">
+  <div class="ttl"><div class="big gtext">NOTE</div><div class="sub">役員との兼務について</div></div>
+  <div class="prose"><p>Stream Partnersの活動は、上場企業の役員としての本業とは別に、個人としてお受けしているものです。本業との利益相反や競業にあたる案件はお受けできません。旅行・クルーズ・宿泊関連の企業様については、原則お断りしていることをあらかじめご了承ください。</p></div>
+</div></section>
+<section class="dual">
+  <a href="#/contact"><div><div class="big">CONTACT</div><div class="sub">まずは、お話しさせてください</div><p>初回1時間は無料です。お受けできるかどうかも含めて、率直にお伝えします。</p></div><span class="circ">→</span></a>
+  <a href="#/story"><div><div class="big">STORY</div><div class="sub">私たちについて</div><p>なぜ社外経営企画なのか、大切にしていること、名前の由来。</p></div><span class="circ">→</span></a>
+</section>
+</main>
+
+<!-- ======================================================= NEWS ======================================================= -->
+<main class="page" data-page="news">
+<section class="subhero">
+  <svg class="arcs" viewBox="0 0 600 600" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1" aria-hidden="true"><circle cx="300" cy="300" r="280"/><circle cx="300" cy="300" r="200"/><circle cx="300" cy="300" r="120"/></svg>
+  <div class="c"><div class="big">NEWS</div><div class="sub">お知らせ</div><h1>お知らせ一覧</h1></div>
+</section>
+<section class="sec"><div class="c">
+  <ul class="nlist">
+    <li><time>2026.09.14</time><span class="chip">お知らせ</span><span>Stream Partners のウェブサイトを公開しました<span class="ex">中小オーナー企業向けの「社外経営企画」として、サービス内容と2つのプランを掲載しています。</span></span><span class="circ">→</span></li>
+    <li><time>2026.09.01</time><span class="chip">サービス</span><span>税理士・会計事務所、M&amp;A仲介向けの紹介パートナー制度を開始<span class="ex">顧問先・お客様から経営のご相談があった際の引き出しとしてご活用いただけます。初回1時間は無料、先生方のご同席も歓迎です。</span></span><span class="circ">→</span></li>
+    <li><time>2026.05.01</time><span class="chip">実績</span><span>出張洗車事業（カーケアジャパン）のアドバイザーに就任<span class="ex">個人宅向け出張洗車・カーシェアメンテナンス事業の経営伴走を開始しました。</span></span><span class="circ">→</span></li>
+  </ul>
+  <p class="note" style="margin-top:20px">※ 記事はサンプルです。実際の掲載内容は順次差し替えます。</p>
+</div></section>
+<section class="dual">
+  <a href="#/contact"><div><div class="big">CONTACT</div><div class="sub">取材・登壇のご依頼</div><p>IPO準備、M&amp;A、中小企業の経営企画に関するテーマで承ります。</p></div><span class="circ">→</span></a>
+  <a href="#/"><div><div class="big">HOME</div><div class="sub">トップページへ</div><p>Stream Partners について</p></div><span class="circ">→</span></a>
+</section>
+</main>
+
+<!-- ======================================================= CONTACT ======================================================= -->
+<main class="page" data-page="contact">
+<section class="subhero">
+  <svg class="arcs" viewBox="0 0 600 600" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1" aria-hidden="true"><circle cx="300" cy="300" r="280"/><circle cx="300" cy="300" r="200"/><circle cx="300" cy="300" r="120"/></svg>
+  <div class="c"><div class="big">CONTACT</div><div class="sub">無料相談・お問い合わせ</div><h1>初回1時間、無料でご相談いただけます</h1></div>
+</section>
+<section class="sec"><div class="c">
+  <div class="ttl"><div class="big gtext">FLOW</div><div class="sub">ご相談の流れ</div></div>
+  <div class="steps">
+    <div class="step"><div class="k">01</div><h3>フォームから送信</h3><p>会社の概要といま気になっていることを一言お書きください。</p></div>
+    <div class="step"><div class="k">02</div><h3>日程調整</h3><p>2営業日以内にメールでご連絡し、オンラインまたは対面の日程を調整します。</p></div>
+    <div class="step"><div class="k">03</div><h3>初回相談（1時間・無料）</h3><p>状況を伺い、取り組む論点の候補をお伝えします。お受けできない場合も率直にお伝えします。</p></div>
+    <div class="step"><div class="k">04</div><h3>ご提案</h3><p>3ヶ月で何を決め、何を動かすかを1枚にまとめてご提案します。ご契約はその後で構いません。</p></div>
+  </div>
+  <p class="note" style="margin-top:20px">顧問税理士や右腕の方など、いつもの相談相手のご同席を歓迎します。</p>
+</div></section>
+<section class="sec gray"><div class="c">
+  <div class="ttl"><div class="big gtext">FORM</div><div class="sub">お問い合わせ・無料相談のお申し込み</div></div>
+  <form class="cform" onsubmit="event.preventDefault();this.querySelector('.note').textContent='送信機能は準備中です。お手数ですがメール（best1ogawa@gmail.com）でご連絡ください。'">
+    <label>ご用件<select id="c-type"><option>無料相談を申し込む</option><option>紹介パートナーについて</option><option>取材・登壇のご依頼</option><option>その他</option></select></label>
+    <label>お名前<input id="c-name" type="text" autocomplete="name"></label>
+    <label>会社名<input id="c-company" type="text" autocomplete="organization"></label>
+    <label>Email<input id="c-mail" type="email" autocomplete="email"></label>
+    <label>ご相談内容<textarea id="c-body" placeholder="会社の概要と、いま気になっていることを一言で構いません"></textarea></label>
+    <button class="b red" type="submit" style="align-self:flex-start">送信する</button>
+    <span class="note">旅行・クルーズ・宿泊関連の企業様は、原則お受けしておりません。</span>
+  </form>
+</div></section>
+<section class="sec" id="partner"><div class="c">
+  <div class="ttl"><div class="big gtext">PARTNERS</div><div class="sub">紹介パートナーの方へ</div></div>
+  <div class="prose" style="margin-bottom:30px"><p>税理士・会計事務所、M&amp;A仲介・FAの皆さまへ。顧問先・お客様の社長から「数字は分かった、で、どうすればいい？」というご相談があったとき、選択肢の一つとして頭の片隅に置いていただけないでしょうか。</p></div>
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+    <div class="card"><h3>税理士・会計事務所の先生方へ</h3><p>税務・会計の領域には踏み込みません。中期計画、事業承継、管理部門の整備、M&amp;Aの考え方など「数字の先」の意思決定を、先生と一緒に前に進める相手です。初回相談への先生のご同席も歓迎します。</p></div>
+    <div class="card"><h3>M&amp;A仲介・FAの皆さまへ</h3><p>仲介・FAの業務と競合せず、紹介料もいただきません。売るべきか続けるべきかの整理、事業計画の蓋然性、成約後のPMIなど、案件が前に進むための「社内側の相手」としてお使いください。</p></div>
+  </div>
+</div></section>
+</main>
+
+<!-- ===== footer ===== -->
+<footer class="footer">
+  <div class="top">
+    <div>
+      <a class="logo" href="#/"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M5 13c5-5 10 5 15 0s10 5 15 0"/><path d="M5 22c5-5 10 5 15 0s10 5 15 0"/><path d="M5 31c5-5 10 5 15 0s10 5 15 0"/></svg><span>STREAM<small>PARTNERS</small></span></a>
+      <address>Stream Partners（個人事業）<br>代表　小川 隆生<br>株式会社ベストワンドットコム 専務取締役<br>Mail: best1ogawa@gmail.com</address>
+    </div>
+    <div class="cols">
+      <ul><li><a href="#/story">STORY</a></li><li><a href="#/plans">PLANS</a></li><li><a href="#/profile">PROFILE</a></li><li><a href="#/news">NEWS</a></li><li><a href="#/contact">CONTACT</a></li></ul>
+      <ul><li><a href="#/service">SERVICE</a></li><li class="jp"><a href="#/service">中期計画・事業計画</a></li><li class="jp"><a href="#/service">管理体制・IPO準備</a></li><li class="jp"><a href="#/service">事業承継・M&amp;A・新規投資</a></li><li class="jp"><a href="#/service">幹部育成・DX/AI活用</a></li></ul>
+    </div>
+  </div>
+  <div class="bottom"><a href="#">プライバシーポリシー</a><span>© 2026 Stream Partners</span></div>
+  <a class="up" href="#top" aria-label="トップへ">↑</a>
+</footer>
+
+<script>
+(function(){
+  const pages=[...document.querySelectorAll('.page')];
+  const h=document.getElementById('hdr');
+  const links=[...document.querySelectorAll('#nav a[data-route]')];
+  function route(){
+    const m=(location.hash||'#/').match(/^#\/([a-z]*)(?:#(.+))?$/);
+    const name=(m&&m[1])||'home';const anchor=m&&m[2];
+    let found=false;
+    pages.forEach(p=>{const on=p.dataset.page===name;p.classList.toggle('active',on);if(on)found=true;});
+    if(!found)pages.forEach(p=>p.classList.toggle('active',p.dataset.page==='home'));
+    links.forEach(a=>a.classList.toggle('current',a.dataset.route===name));
+    h.classList.remove('open');
+    if(anchor){const el=document.getElementById(anchor);if(el){el.scrollIntoView();return;}}
+    if(location.hash==='#top'){window.scrollTo(0,0);return;}
+    window.scrollTo(0,0);
+  }
+  addEventListener('hashchange',route);
+  document.getElementById('menuBtn').addEventListener('click',()=>h.classList.toggle('open'));
+  route();
+})();
+/* ---------- sunlit water : WebGL ---------- */
+(function(){
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const VS=`attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}`;
+  const FS=`precision highp float;
+uniform vec2 R;uniform float T;uniform int M;
+float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);
+ return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y);}
+float fbm(vec2 p){float v=0.,a=.5;mat2 m=mat2(1.6,1.2,-1.2,1.6);
+ for(int i=0;i<5;i++){v+=a*noise(p);p=m*p;a*=.5;}return v;}
+/* せせらぎ */
+float streamF(vec2 uv,float t){
+ vec2 q=uv*vec2(9.,5.);float flow=t*.9;
+ float r1=fbm(q+vec2(flow,0.)+fbm(q*.6-vec2(0.,flow*.3)));
+ float r2=fbm(q*2.3+vec2(flow*1.6,flow*.2));
+ float rip=sin(q.x*3.+r1*9.+t*2.2)*.5+.5;
+ float stone=fbm(uv*vec2(4.,2.5)*1.2+3.7);
+ float v=.16+.22*stone;
+ v+=.30*pow(rip*r1,1.5);
+ v+=.30*smoothstep(.64,.88,r2);
+ v+=.16*smoothstep(.76,.96,fbm(q*4.+vec2(flow*2.5,0.)));
+ v*=mix(.7,1.05,smoothstep(0.,.8,uv.y+.25*fbm(uv*3.)));
+ return v;}
+/* 大河 */
+float riverF(vec2 uv,float t){
+ float hz=.36;
+ if(uv.y>hz){float s=(uv.y-hz)/(1.-hz);float cloud=fbm(vec2(uv.x*3.+t*.02,s*2.)*1.5);return mix(.78,.92,s)-.10*cloud;}
+ float d=(hz-uv.y);float z=.05/(d+.02);
+ vec2 p=vec2((uv.x-.5)*z*3.,z);
+ float w=fbm(p*vec2(1.,2.2)+vec2(t*.15,t*.35));
+ float w2=fbm(p*vec2(3.,7.)+vec2(-t*.2,t*.7));
+ float band=.5+.5*sin(p.y*6.+w*5.-t*.8);
+ float v=.34+.22*w+.16*band*w2;
+ v+=.22*smoothstep(.64,.9,w2);
+ v=mix(v,.86,exp(-d*14.));
+ return v;}
+/* 海 */
+float seaF(vec2 uv,float t){
+ float hz=.40;
+ if(uv.y>hz){float s=(uv.y-hz)/(1.-hz);float cloud=fbm(vec2(uv.x*2.2+t*.015,s*1.6)*2.);return mix(.88,.72,s)+.08*cloud;}
+ float d=hz-uv.y;float z=.06/(d+.025);
+ vec2 p=vec2((uv.x-.5)*z*2.6,z);
+ float swell=sin(p.y*2.4-t*.9+fbm(p*.8)*3.)*.5+.5;
+ float ch=fbm(p*vec2(2.,4.)+vec2(t*.3,-t*.5));
+ float ch2=fbm(p*vec2(6.,12.)+vec2(-t*.6,t*.9));
+ float v=.28+.20*swell+.16*ch;
+ float foam=smoothstep(.55,.8,ch2*swell+ch*.3);
+ v+=.40*foam;
+ v=mix(v,.9,exp(-d*10.));
+ return v;}
+vec3 grade(float v,int m){
+ vec3 deep,mid,hi;
+ if(m==1){deep=vec3(.06,.30,.36);mid=vec3(.36,.68,.70);hi=vec3(1.,.97,.86);}
+ else if(m==2){deep=vec3(.05,.28,.42);mid=vec3(.30,.66,.76);hi=vec3(1.,.98,.90);}
+ else {deep=vec3(.05,.27,.28);mid=vec3(.30,.66,.60);hi=vec3(1.,.96,.78);}
+ v=clamp(v,0.,1.);
+ return v<.5?mix(deep,mid,v*2.):mix(mid,hi,(v-.5)*2.);}
+void main(){
+ vec2 uv=gl_FragCoord.xy/R;float ar=R.x/R.y;float v;
+ if(M==0) v=streamF(vec2(uv.x*ar,uv.y),T);
+ else if(M==1) v=riverF(uv,T);
+ else if(M==2) v=seaF(uv,T);
+ else v=streamF(vec2(uv.x*ar*1.4+2.,uv.y*1.2),T*.8);
+ vec3 c=grade(v,M);
+ /* 木漏れ日 : slow warm dapples */
+ float dp=fbm(vec2(uv.x*ar,uv.y)*vec2(2.6,2.2)+vec2(T*.06,T*.04));
+ dp=smoothstep(.48,.78,dp);
+ float dp2=fbm(vec2(uv.x*ar,uv.y)*vec2(5.,4.)-vec2(T*.05,T*.07));
+ dp2=smoothstep(.55,.85,dp2);
+ c+=vec3(.42,.34,.12)*dp*(.35+.65*v);
+ c+=vec3(.30,.26,.14)*dp2*v;
+ float vig=smoothstep(1.4,.45,length((uv-.5)*vec2(1.3,1.)));
+ c=mix(c*.72,c,vig);
+ gl_FragColor=vec4(clamp(c,0.,1.),1.);}`;
+  const modes={stream:0,river:1,sea:2,stream2:3};
+  document.querySelectorAll('canvas[data-water]').forEach(cv=>{
+    const gl=cv.getContext('webgl',{antialias:false,alpha:false});
+    const fallback=()=>{cv.style.background='linear-gradient(180deg,#8fc6c4,#1f5a63)';};
+    if(!gl){fallback();return;}
+    const mk=(t,s)=>{const sh=gl.createShader(t);gl.shaderSource(sh,s);gl.compileShader(sh);return sh;};
+    const pr=gl.createProgram();gl.attachShader(pr,mk(gl.VERTEX_SHADER,VS));gl.attachShader(pr,mk(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);
+    if(!gl.getProgramParameter(pr,gl.LINK_STATUS)){fallback();return;}
+    gl.useProgram(pr);
+    const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+    const uR=gl.getUniformLocation(pr,'R'),uT=gl.getUniformLocation(pr,'T'),uM=gl.getUniformLocation(pr,'M');
+    gl.uniform1i(uM,modes[cv.dataset.water]||0);
+    let visible=false,w=0,h=0;const seed=Math.random()*100;
+    const resize=()=>{const s=0.5;w=Math.max(1,Math.floor(cv.clientWidth*s));h=Math.max(1,Math.floor(cv.clientHeight*s));if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;gl.viewport(0,0,w,h);gl.uniform2f(uR,w,h);}};
+    const draw=(t)=>{resize();gl.uniform1f(uT,seed+t);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);};
+    const loop=(ts)=>{if(visible&&!reduce){draw(ts/1000);requestAnimationFrame(loop);}};
+    new IntersectionObserver(es=>{es.forEach(e=>{const was=visible;visible=e.isIntersecting;if(visible&&!was){draw(performance.now()/1000);requestAnimationFrame(loop);}});},{rootMargin:'120px'}).observe(cv);
+    draw(0);
+    addEventListener('resize',()=>draw(performance.now()/1000),{passive:true});
+  });
+})();
+
+</script>
+</body>
+</html>
