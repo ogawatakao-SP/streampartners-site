@@ -597,15 +597,7 @@ canvas[data-water]{position:absolute;inset:0;width:100%;height:100%;display:bloc
 </div></section>
 <section class="sec gray"><div class="c">
   <div class="ttl"><div class="big gtext">FORM</div><div class="sub">お問い合わせ・無料相談のお申し込み</div></div>
-  <form class="cform" onsubmit="event.preventDefault();this.querySelector('.note').textContent='送信機能は準備中です。お手数ですがメール（best1ogawa@gmail.com）でご連絡ください。'">
-    <label>ご用件<select id="c-type"><option>無料相談を申し込む</option><option>紹介パートナーについて</option><option>取材・登壇のご依頼</option><option>その他</option></select></label>
-    <label>お名前<input id="c-name" type="text" autocomplete="name"></label>
-    <label>会社名<input id="c-company" type="text" autocomplete="organization"></label>
-    <label>Email<input id="c-mail" type="email" autocomplete="email"></label>
-    <label>ご相談内容<textarea id="c-body" placeholder="会社の概要と、いま気になっていることを一言で構いません"></textarea></label>
-    <button class="b red" type="submit" style="align-self:flex-start">送信する</button>
-    <span class="note">旅行・クルーズ・宿泊関連の企業様は、原則お受けしておりません。</span>
-  </form>
+  <form class="cform" id="spform" action="https://formspree.io/f/mvkoendv" method="POST" onsubmit="return spSend(event)"><label>ご用件<select id="c-type" name="ご用件"><option>無料相談を申し込む</option><option>紹介パートナーについて</option><option>取材・登壇のご依頼</option><option>その他</option></select></label><label>お名前<input id="c-name" name="お名前" type="text" autocomplete="name" required></label><label>会社名<input id="c-company" name="会社名" type="text" autocomplete="organization"></label><label>Email<input id="c-mail" name="email" type="email" autocomplete="email" required></label><label>ご相談内容<textarea id="c-body" name="ご相談内容" placeholder="会社の概要と、いま気になっていることを一言で構いません" required></textarea></label><input type="hidden" name="_subject" value="【Stream Partners】サイトからのお問い合わせ"><input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"><button class="b red" type="submit" id="spbtn" style="align-self:flex-start">送信する</button><span class="note" id="spnote">旅行・クルーズ・宿泊関連の企業様は、原則お受けしておりません。</span></form><script>function spSend(e){e.preventDefault();var f=e.target,b=document.getElementById('spbtn'),n=document.getElementById('spnote');b.disabled=true;b.textContent='送信中…';fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){f.reset();n.textContent='送信しました。2営業日以内にご連絡します。';b.textContent='送信完了';}else{throw new Error();}}).catch(function(){n.textContent='送信に失敗しました。お手数ですが ogawatakao@streampartners.jp まで直接ご連絡ください。';b.disabled=false;b.textContent='送信する';});return false;}</script>
 </div></section>
 <section class="sec" id="partner"><div class="c">
   <div class="ttl"><div class="big gtext">PARTNERS</div><div class="sub">紹介パートナーの方へ</div></div>
