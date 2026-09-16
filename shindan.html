@@ -2,6 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J49HYNRWXM"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-J49HYNRWXM');
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="経営の流れ診断｜24問・約3分。方向・決断・土台・人・資金と株主・次の一手の6領域から、あなたの会社がどこで詰まっているかを可視化します。Stream Partners（社外経営企画）提供。">
 <meta property="og:title" content="経営の流れ診断｜あなたの会社は、どこで流れが詰まっているか。">
@@ -521,6 +529,7 @@ function next(){
 }
 
 $("startBtn").addEventListener("click", function(){
+  try{gtag("event","shindan_start");}catch(e){}
   $("intro").hidden = true;
   $("quiz").hidden = false;
   cur = 0;
@@ -653,6 +662,7 @@ function showResult(){
   $("result").hidden = false;
   $("pBar").style.width = "100%";
 
+  try{gtag("event","shindan_complete",{score:total,verdict:v.name,weakest:DOMAINS[sc.indexOf(Math.min.apply(null,sc))].key});}catch(e){}
   $("rScore").textContent = total;
   $("rName").textContent = v.name;
   $("rDesc").textContent = v.desc;
@@ -686,6 +696,10 @@ function showResult(){
 
   window.scrollTo(0,0);
 }
+
+$("dlLink").addEventListener("click", function(){
+  try{gtag("event","file_download",{file_name:"keiei-no-nagare-90days.pdf"});}catch(e){}
+});
 
 $("retryBtn").addEventListener("click", function(){
   answers = new Array(24).fill(null);
@@ -740,6 +754,7 @@ $("dlform").addEventListener("submit", function(e){
   }).then(function(r){ return r.json(); })
     .then(function(j){
       if (j && j.success){
+        try{gtag("event","generate_lead",{lead_source:"shindan_report",score:total,verdict:verdictFor(total).name});}catch(e){}
         $("dlLink").setAttribute("href", REPORT_URL);
         $("gateForm").style.display = "none";
         $("gateDone").style.display = "block";

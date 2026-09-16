@@ -2,6 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J49HYNRWXM"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-J49HYNRWXM',{send_page_view:false});
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Stream Partners（小川隆生）— 中小オーナー企業の社長に対する「社外経営企画」。中期計画・管理体制・事業承継・M&A・幹部育成・DX/AI活用まで、意思決定の設計・レビュー・進捗管理を月額リテイナーで少数だけお受けします。初回1時間は無料。">
 <meta property="og:title" content="Stream Partners｜経営に、よい流れを。">
@@ -672,6 +680,7 @@ if(r.ok){
 f.reset();
 n.textContent='送信しました。2営業日以内にご連絡します。';
 b.textContent='送信完了';
+try{gtag('event','generate_lead',{lead_source:'contact_form',form_type:(document.getElementById('c-type')||{}).value||''});}catch(e){}
 }else{
 throw new Error();
 }
@@ -718,6 +727,7 @@ return false;
   function route(){
     const m=(location.hash||'#/').match(/^#\/([a-z]*)(?:#(.+))?$/);
     const name=(m&&m[1])||'home';const anchor=m&&m[2];
+    try{gtag('event','page_view',{page_title:'SP / '+name,page_location:location.href,page_path:'/'+(name==='home'?'':name)});}catch(e){}
     let found=false;
     pages.forEach(p=>{const on=p.dataset.page===name;p.classList.toggle('active',on);if(on)found=true;});
     if(!found)pages.forEach(p=>p.classList.toggle('active',p.dataset.page==='home'));
@@ -730,6 +740,11 @@ return false;
   addEventListener('hashchange',route);
   document.getElementById('menuBtn').addEventListener('click',()=>h.classList.toggle('open'));
   route();
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a[href*="shindan.html"]');
+    if(!a)return;
+    try{gtag('event','shindan_click',{link_text:(a.textContent||'').trim().slice(0,60),page_path:location.hash||'#/'});}catch(e){}
+  });
 })();
 /* ---------- sunlit water : WebGL ---------- */
 (function(){
