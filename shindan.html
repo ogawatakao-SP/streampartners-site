@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="経営の流れ診断｜24問・約3分。方向・決断・土台・人・資金と株主・次の一手の6領域から、あなたの会社がどこで詰まっているかを可視化します。Stream Partners（社外経営企画）提供。">
+<meta property="og:title" content="経営の流れ診断｜あなたの会社は、どこで流れが詰まっているか。">
+<meta property="og:description" content="24問・約3分。6領域のスコアで、経営の詰まりを可視化します。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23f01f1f'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M6 13c5-5 9 5 14 0s9 5 14 0'/%3E%3Cpath d='M6 21c5-5 9 5 14 0s9 5 14 0'/%3E%3Cpath d='M6 29c5-5 9 5 14 0s9 5 14 0'/%3E%3C/g%3E%3C/svg%3E">
+<title>経営の流れ診断｜Stream Partners</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<style>
+:root{
+  --bg:#ffffff; --gray:#efefef; --gray2:#d9dede; --ink:#111111; --muted:#555;
+  --p1:#ff1e1e; --p2:#ff6b6b; --p:#f01f1f; --dark:#3d3d3d; --go:#22c55e;
+  --line:rgba(0,0,0,.14);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#ffffff; } }
+:root[data-theme="dark"]{ --bg:#ffffff; }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic Pro",メイリオ,sans-serif;font-size:14px;line-height:2;font-weight:500;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+img{max-width:100%}
+[hidden]{display:none!important}
+.en{font-family:Poppins,sans-serif}
+.grad{background:linear-gradient(90deg,var(--p1),var(--p2))}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;height:calc(64px + env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);display:flex;align-items:center;justify-content:space-between;color:#fff;background:linear-gradient(90deg,var(--p1),var(--p2));box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.hdr .logo{display:flex;align-items:center;gap:10px;padding-left:56px;font-family:Poppins,sans-serif;font-weight:700;font-size:20px;letter-spacing:.14em;line-height:1}
+.hdr .logo small{font-size:9px;letter-spacing:.3em;font-weight:500;display:block;opacity:.9}
+.hdr .logo svg{width:30px;height:30px}
+.hdr .sq{display:flex;align-items:center;align-self:stretch;padding:0 22px;font-size:13px;font-weight:700;letter-spacing:.06em;color:#fff;background:var(--dark)}
+
+/* ---------- buttons ---------- */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.b{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:190px;padding:14px 26px;font-size:13px;font-weight:700;letter-spacing:.06em;color:#fff;background:var(--dark);border:0;cursor:pointer;font-family:inherit;transition:filter .2s}
+.b:hover{filter:brightness(1.12)}
+.b.red{background:var(--p)}
+.b.go{background:var(--go)}
+.b:disabled{opacity:.55;cursor:default}
+.b.ghost{background:none;color:var(--muted);min-width:0;padding:10px 4px;font-size:12px}
+.b.ghost:hover{color:var(--ink);filter:none}
+:focus-visible{outline:2px solid var(--p);outline-offset:2px}
+
+/* ---------- layout ---------- */
+.c{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 56px}
+.c.narrow{max-width:860px}
+.sec{position:relative;padding:90px 0}
+.sec.gray{background:var(--gray)}
+.ttl{margin-bottom:40px}
+.ttl .big{font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(44px,6vw,84px);line-height:1;letter-spacing:.02em}
+.ttl .sub{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;margin-top:6px}
+.ttl .sub::before{content:"";width:14px;height:1px;background:var(--ink)}
+.note{font-size:12px;font-weight:700;color:var(--muted);line-height:1.9}
+.pill{display:inline-block;font-family:Poppins,sans-serif;font-weight:600;font-size:11px;letter-spacing:.2em;color:var(--p);border:1px solid var(--p);padding:2px 12px;border-radius:40px}
+
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff;padding:calc(120px + env(safe-area-inset-top,0px)) 0 70px;overflow:hidden;position:relative}
+.hero .quote{font-family:Poppins,sans-serif;font-size:15px;font-weight:500;line-height:1.5;margin-bottom:22px;padding-left:22px;position:relative;letter-spacing:.1em}
+.hero .quote::before{content:"";position:absolute;left:0;top:10px;width:14px;height:1px;background:#fff}
+.hero h1{font-size:clamp(28px,3.4vw,46px);font-weight:900;line-height:1.35;letter-spacing:.04em;margin-bottom:24px}
+.hero .lead{font-size:14px;font-weight:700;line-height:2;max-width:46ch;margin-bottom:32px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:12px;font-weight:700;margin-bottom:34px;opacity:.95}
+.hero .meta span{display:flex;align-items:center;gap:8px}
+.hero .meta span::before{content:"";width:12px;height:1px;background:#fff;flex:none}
+.hero .arcs{position:absolute;right:-60px;top:-40px;width:520px;height:520px;pointer-events:none;opacity:.22}
+
+/* ---------- intro cards ---------- */
+.dcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.dcard{background:#fff;padding:26px 24px;border-top:4px solid var(--p);box-shadow:0 8px 30px rgba(0,0,0,.05)}
+.dcard .tag{font-family:Poppins,sans-serif;font-weight:600;font-size:11px;letter-spacing:.2em;color:var(--p)}
+.dcard h3{font-size:17px;font-weight:900;margin:4px 0 8px}
+.dcard p{font-size:12.5px;font-weight:700;line-height:1.9;color:#333}
+
+/* ---------- quiz ---------- */
+.quizwrap{padding:calc(100px + env(safe-area-inset-top,0px)) 0 90px;min-height:100vh}
+.prog{position:sticky;top:calc(64px + env(safe-area-inset-top,0px));z-index:40;background:var(--bg);padding:14px 0 16px;border-bottom:1px solid var(--line);margin-bottom:46px}
+.prog .bar{height:4px;background:var(--gray);overflow:hidden}
+.prog .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--p1),var(--p2));transition:width .35s cubic-bezier(.2,.7,.3,1)}
+.prog .meta{display:flex;justify-content:space-between;align-items:baseline;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--muted);margin-bottom:8px}
+.prog .meta b{font-family:Poppins,sans-serif;font-size:15px;color:var(--ink)}
+.prog .meta .dom{color:var(--p)}
+.q .qnum{font-family:Poppins,sans-serif;font-weight:600;font-size:13px;letter-spacing:.2em;color:var(--p);margin-bottom:12px}
+.q h2{font-size:clamp(19px,2.4vw,27px);font-weight:900;line-height:1.7;margin-bottom:34px;max-width:26em}
+.opts{display:flex;flex-direction:column;gap:10px;max-width:640px;margin-bottom:26px}
+.opt{display:flex;align-items:center;gap:16px;width:100%;text-align:left;padding:16px 22px;font:inherit;font-size:14.5px;font-weight:700;color:var(--ink);background:var(--gray);border:1px solid transparent;cursor:pointer;transition:background .15s,border-color .15s,transform .1s}
+.opt:hover{background:#e6e6e6}
+.opt:active{transform:scale(.995)}
+.opt.on{background:#fff;border-color:var(--p);box-shadow:0 6px 20px rgba(240,31,31,.12)}
+.opt .k{font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.1em;color:var(--muted);width:18px;flex:none}
+.opt.on .k{color:var(--p)}
+.fade{animation:fade .26s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- result ---------- */
+.rwrap{padding:calc(100px + env(safe-area-inset-top,0px)) 0 0}
+#result .sec:first-of-type{padding-top:56px}
+.verdict{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-bottom:16px}
+.score{font-family:Poppins,sans-serif;font-weight:600;line-height:1;text-align:center}
+.score .n{font-size:84px;background:linear-gradient(90deg,var(--p1),var(--p2));-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.score .d{font-size:13px;color:var(--muted);letter-spacing:.14em;margin-top:2px}
+.verdict h2{font-size:clamp(24px,3vw,36px);font-weight:900;line-height:1.5;margin-bottom:12px}
+.verdict p{font-size:13.5px;font-weight:700;line-height:2;color:#333;max-width:44ch}
+.rgrid{display:grid;grid-template-columns:minmax(300px,1fr) 1fr;gap:56px;align-items:center}
+.radar{width:100%;height:auto;display:block;overflow:visible}
+.radar .ring{fill:none;stroke:rgba(0,0,0,.10);stroke-width:1}
+.radar .spoke{stroke:rgba(0,0,0,.10);stroke-width:1}
+.radar .area{fill:url(#rgrad);stroke:var(--p);stroke-width:2;stroke-linejoin:round}
+.radar .dot{fill:#fff;stroke:var(--p);stroke-width:2}
+.radar .lbl{font-family:"Noto Sans JP",sans-serif;font-size:12.5px;font-weight:900;fill:var(--ink)}
+.radar .lblv{font-family:Poppins,sans-serif;font-size:11px;font-weight:600;fill:var(--muted)}
+.radar .hit{fill:transparent;cursor:pointer}
+.radar .hit:hover + .dot,.radar .hit:focus + .dot{r:7}
+.bars{display:flex;flex-direction:column;gap:2px}
+.bars .r{display:grid;grid-template-columns:7.5em 1fr 3.2em;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.bars .r:first-child{border-top:1px solid var(--line)}
+.bars .nm{font-size:13px;font-weight:900}
+.bars .tr{height:10px;background:var(--gray);position:relative}
+.bars .fl{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,var(--p1),var(--p2));border-radius:0 3px 3px 0;width:0;transition:width .7s cubic-bezier(.2,.7,.3,1)}
+.bars .r.low .nm{color:var(--p)}
+.bars .vl{font-family:Poppins,sans-serif;font-weight:600;font-size:14px;text-align:right;font-variant-numeric:tabular-nums}
+.bars .vl small{font-size:10px;color:var(--muted)}
+.weak{background:var(--gray);padding:34px 36px;border-left:4px solid var(--p);margin-top:56px}
+.weak .tag{font-family:Poppins,sans-serif;font-weight:600;font-size:11px;letter-spacing:.2em;color:var(--p);margin-bottom:6px}
+.weak h3{font-size:21px;font-weight:900;margin-bottom:14px}
+.weak p{font-size:13.5px;font-weight:700;line-height:2.1;color:#222;max-width:62ch}
+.tip{position:fixed;z-index:60;pointer-events:none;background:var(--ink);color:#fff;font-size:12px;font-weight:700;line-height:1.6;padding:8px 12px;transform:translate(-50%,-115%);white-space:nowrap;opacity:0;transition:opacity .12s}
+.tip.on{opacity:1}
+/* タッチ端末はホバーがないのでツールチップ自体を出さない（値は軸ラベルに併記済み） */
+@media (hover:none){ .tip{display:none} .radar .hit{pointer-events:none} }
+
+/* ---------- gate ---------- */
+.gate{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff;padding:80px 0}
+.gate h2{font-size:clamp(22px,2.6vw,32px);font-weight:900;line-height:1.6;margin-bottom:18px}
+.gate .lead{font-size:13.5px;font-weight:700;line-height:2.1;max-width:52ch;margin-bottom:26px}
+.gate .toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.gate .toc span{font-size:11.5px;font-weight:700;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:40px}
+.gform{max-width:560px;display:flex;flex-direction:column;gap:14px}
+.gform label{font-size:11.5px;font-weight:700;letter-spacing:.06em;display:flex;flex-direction:column;gap:6px}
+.gform input{width:100%;border:1px solid rgba(255,255,255,.7);background:rgba(160,0,0,.22);color:#fff;font:inherit;font-size:14px;font-weight:700;padding:12px 14px}
+.gform input::placeholder{color:rgba(255,255,255,.78);font-weight:500}
+.gform input:focus{outline:2px solid #fff;outline-offset:2px;background:rgba(160,0,0,.34)}
+.gform .agree{flex-direction:row;align-items:flex-start;gap:10px;font-size:11.5px;font-weight:700;line-height:1.8;cursor:pointer}
+.gform .agree input{width:16px;height:16px;flex:none;margin-top:5px;accent-color:#fff}
+.gate .done{display:none;background:#fff;color:var(--ink);padding:40px 40px 44px;max-width:620px;border-top:4px solid var(--p)}
+.gate .done h3{font-size:22px;font-weight:900;margin-bottom:12px}
+.gate .done p{font-size:13px;font-weight:700;line-height:2;color:#333;margin-bottom:24px}
+
+/* ---------- cta / footer ---------- */
+.cta{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.cta h2{font-size:clamp(20px,2.3vw,28px);font-weight:900;line-height:1.7}
+.cta p{font-size:13px;font-weight:700;color:#333;margin-top:12px;max-width:50ch;line-height:2}
+.footer{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff;padding:60px 56px 30px;position:relative}
+.footer .top{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start}
+.footer .logo{font-family:Poppins,sans-serif;font-weight:700;font-size:26px;letter-spacing:.14em;display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.footer .logo svg{width:38px;height:38px}
+.footer .logo small{display:block;font-size:10px;letter-spacing:.3em;font-weight:500}
+.footer address{font-style:normal;font-size:12.5px;font-weight:700;line-height:2}
+.footer .cols{display:flex;gap:40px;font-family:Poppins,sans-serif;font-weight:600;font-size:14px}
+.footer .cols ul{display:flex;flex-direction:column;gap:6px}
+.footer .bottom{display:flex;justify-content:space-between;align-items:center;margin-top:50px;font-size:11px;font-weight:700}
+
+@media (max-width:980px){
+  .hdr .logo{padding-left:20px}
+  .c{padding:0 24px}
+  .sec{padding:64px 0}
+  .hero{padding-bottom:54px}
+  .hero .arcs{display:none}
+  .verdict{grid-template-columns:1fr;gap:18px;text-align:left}
+  .score{text-align:left}
+  .score .n{font-size:68px}
+  .rgrid{grid-template-columns:1fr;gap:38px}
+  .weak{padding:28px 24px;margin-top:40px}
+  .cta{grid-template-columns:1fr;gap:24px}
+  .footer{padding:50px 24px 30px}
+  .footer .top{grid-template-columns:1fr}
+  .q h2{margin-bottom:26px}
+  .prog{margin-bottom:34px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .fade{animation:none}
+  .prog .bar i,.bars .fl{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <a class="logo" href="https://streampartners.jp/" aria-label="Stream Partners">
+    <svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M5 13c5-5 10 5 15 0s10 5 15 0"/><path d="M5 22c5-5 10 5 15 0s10 5 15 0"/><path d="M5 31c5-5 10 5 15 0s10 5 15 0"/></svg>
+    <span>STREAM<small>PARTNERS</small></span>
+  </a>
+  <a class="sq" href="https://streampartners.jp/#/contact">無料相談</a>
+</header>
+
+<main>
+
+<!-- ===== 1. intro ===== -->
+<div id="intro">
+<section class="hero">
+  <svg class="arcs" viewBox="0 0 520 520" fill="none" stroke="#fff" stroke-width="1.4" aria-hidden="true">
+    <path d="M20 180c70-70 140 70 210 0s140 70 210 0"/><path d="M20 250c70-70 140 70 210 0s140 70 210 0"/>
+    <path d="M20 320c70-70 140 70 210 0s140 70 210 0"/><path d="M20 390c70-70 140 70 210 0s140 70 210 0"/>
+  </svg>
+  <div class="c">
+    <p class="quote en">Where is the flow blocked?</p>
+    <h1>あなたの会社は、<br>どこで流れが詰まっているか。</h1>
+    <p class="lead">経営がうまく進まないとき、原因は「頑張りが足りない」ことではなく、どこか一箇所で流れが止まっていることのほうが多いものです。24の問いで、詰まっている場所を特定します。</p>
+    <div class="meta">
+      <span>24問・約3分</span><span>6領域をスコア化</span><span>その場で結果表示</span>
+    </div>
+    <div class="btns"><button class="b" id="startBtn">診断をはじめる</button></div>
+  </div>
+</section>
+
+<section class="sec gray">
+  <div class="c">
+    <div class="ttl"><div class="big en">6 AREAS</div><div class="sub">診断する6つの領域</div></div>
+    <div class="dcards" id="introCards"></div>
+    <p class="note" style="margin-top:34px">
+      設問はすべて「できているか」ではなく「実際にそうなっているか」を問う形にしています。<br>
+      回答内容はスコアの計算にのみ使用し、途中で離脱された場合は何も記録されません。
+    </p>
+  </div>
+</section>
+</div>
+
+<!-- ===== 2. quiz ===== -->
+<div id="quiz" hidden>
+<div class="quizwrap">
+  <div class="c narrow">
+    <div class="prog">
+      <div class="meta"><span><b id="pNow">1</b> / 24</span><span class="dom" id="pDom">方向</span></div>
+      <div class="bar"><i id="pBar"></i></div>
+    </div>
+    <div class="q" id="qBox"></div>
+    <button class="b ghost" id="backBtn" hidden>← ひとつ前にもどる</button>
+  </div>
+</div>
+</div>
+
+<!-- ===== 3. result ===== -->
+<div id="result" hidden>
+<div class="rwrap">
+  <div class="c">
+    <div class="ttl"><div class="big en">RESULT</div><div class="sub">診断結果</div></div>
+    <div class="verdict">
+      <div class="score"><div class="n" id="rScore">0</div><div class="d en">/ 72 POINTS</div></div>
+      <div><h2 id="rName">—</h2><p id="rDesc">—</p></div>
+    </div>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="c">
+    <div class="rgrid">
+      <svg class="radar" id="radar" viewBox="25 50 350 295" role="img" aria-labelledby="radarTitle">
+        <title id="radarTitle">6領域のスコア（各12点満点）のレーダーチャート</title>
+        <defs><linearGradient id="rgrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#ff1e1e" stop-opacity=".30"/><stop offset="1" stop-color="#ff6b6b" stop-opacity=".30"/>
+        </linearGradient></defs>
+      </svg>
+      <div>
+        <div class="bars" id="bars"></div>
+        <p class="note" style="margin-top:18px">各領域12点満点。スコアが低い領域ほど、いま会社全体の速度を決めている可能性が高い場所です。</p>
+      </div>
+    </div>
+
+    <div class="weak">
+      <div class="tag en">FOCUS</div>
+      <h3 id="wTitle">—</h3>
+      <p id="wBody">—</p>
+    </div>
+  </div>
+</section>
+
+<!-- gate -->
+<section class="gate">
+  <div class="c">
+    <div id="gateForm">
+      <span class="pill" style="color:#fff;border-color:rgba(255,255,255,.7)">FREE REPORT</span>
+      <h2 style="margin-top:14px">経営の流れを通す<br>— 6つの領域と、最初の90日</h2>
+      <p class="lead">スコアの意味、その領域が詰まったまま放置されたときに実際に起きること、そして最初の90日で何から手をつけるか。6領域すべての読み解きをPDFにまとめています。そのまま使える経営会議アジェンダの雛形つき。</p>
+      <div class="toc">
+        <span>6領域 × 「低いとき実際に起きること」</span><span>領域別・最初の90日でやる3つ</span><span>経営会議アジェンダ雛形</span>
+      </div>
+      <form class="gform" id="dlform" novalidate>
+        <label>お名前<input id="g-name" name="お名前" type="text" autocomplete="name" placeholder="小川 隆生" required></label>
+        <label>会社名<input id="g-company" name="会社名" type="text" autocomplete="organization" placeholder="株式会社◯◯"></label>
+        <label>Email<input id="g-mail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label class="agree"><input type="checkbox" id="g-agree"><span>診断結果（総合スコアと6領域のスコア）を添えて送信することに同意します。営業目的の一斉配信は行いません。</span></label>
+        <button class="b" type="submit" id="g-btn" style="align-self:flex-start;background:var(--dark)">レポートを受け取る</button>
+        <span class="note" id="g-note" style="color:rgba(255,255,255,.9)">いただいたアドレスはレポートの送付とご連絡にのみ使用します。</span>
+      </form>
+    </div>
+    <div class="done" id="gateDone">
+      <h3>ありがとうございます。</h3>
+      <p>下のボタンからレポートをダウンロードしてください。<br>内容についてのご質問や、自社の場合はどうかというご相談は、初回1時間まで無料でお受けしています。</p>
+      <div class="btns">
+        <a class="b red" id="dlLink" href="#" download>レポートをダウンロード</a>
+        <a class="b" href="https://streampartners.jp/#/contact">無料相談を申し込む</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gray">
+  <div class="c">
+    <div class="cta">
+      <div>
+        <h2>詰まっている場所が分かっても、<br>ひとりで通すのは別の話です。</h2>
+        <p>Stream Partners は、中小オーナー企業・スタートアップの社長に対する「社外経営企画」です。資料作成や事務の代行はしません。意思決定の設計・レビュー・進捗管理を、社長の隣で一緒に回します。初回1時間は無料、2営業日以内にご返信します。</p>
+      </div>
+      <div class="btns">
+        <a class="b red" href="https://streampartners.jp/#/contact">無料で相談する</a>
+        <a class="b" href="https://streampartners.jp/#/service">サービスを見る</a>
+      </div>
+    </div>
+    <p class="note" style="margin-top:28px">※ 旅行・クルーズ・宿泊関連の企業様は、本業との競業回避のため原則お受けしておりません。</p>
+    <div class="btns" style="margin-top:34px"><button class="b ghost" id="retryBtn">もう一度診断する</button></div>
+  </div>
+</section>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="top">
+    <div>
+      <a class="logo" href="https://streampartners.jp/"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M5 13c5-5 10 5 15 0s10 5 15 0"/><path d="M5 22c5-5 10 5 15 0s10 5 15 0"/><path d="M5 31c5-5 10 5 15 0s10 5 15 0"/></svg><span>STREAM<small>PARTNERS</small></span></a>
+      <address>Stream Partners<br>代表　小川 隆生<br>Mail: info@streampartners.jp</address>
+    </div>
+    <div class="cols">
+      <ul>
+        <li><a href="https://streampartners.jp/#/story">STORY</a></li>
+        <li><a href="https://streampartners.jp/#/service">SERVICE</a></li>
+        <li><a href="https://streampartners.jp/#/plans">PLANS</a></li>
+        <li><a href="https://streampartners.jp/#/profile">PROFILE</a></li>
+        <li><a href="https://streampartners.jp/#/contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom"><span>経営に、よい流れを。</span><span>© 2026 Stream Partners</span></div>
+</footer>
+
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<script>
+/* ============================================================
+   設定 — 公開前にこの2つを差し替える
+   ============================================================ */
+var WEB3FORMS_KEY = "23d7794f-8a63-4085-8622-26f2ebef85b0";      // web3forms.com で取得
+var REPORT_URL    = "/keiei-no-nagare-90days.pdf";        // レポートPDFの置き場所（リポジトリ直下）
+
+/* ============================================================
+   データ
+   ============================================================ */
+var DOMAINS = [
+  {key:"方向", en:"DIRECTION", desc:"3年後と今期の数字がつながっているか"},
+  {key:"決断", en:"DECISION",  desc:"決まる会議になっているか"},
+  {key:"土台", en:"STRUCTURE", desc:"数字と仕組みが人の記憶から独立しているか"},
+  {key:"人",   en:"PEOPLE",    desc:"社長以外が判断できるか"},
+  {key:"資金と株主", en:"CAPITAL", desc:"外に説明でき、先が見えているか"},
+  {key:"次の一手", en:"GROWTH",  desc:"構想が形になり、判断基準があるか"}
+];
+
+var QUESTIONS = [
+  /* 方向 */
+  "3年後にこの会社をどうしたいかを、数字と言葉の両方で人に説明できる",
+  "今期の予算は、3年後の目標から逆算して作られている（前年比の積み上げではない）",
+  "計画と実績のズレの理由を、毎月「誰が・何をしなかったから」のレベルまで説明できる",
+  "計画を作るとき、うまくいかなかった場合の代替案も一緒に用意している",
+  /* 決断 */
+  "経営会議は「今日はこれを決める」が事前に決まった状態で始まる",
+  "直近3ヶ月の経営会議で決まったことを、いま3つ挙げられる",
+  "前回決めたことの進捗を、毎回冒頭で確認している",
+  "会議前日に、報告資料づくりで社員の時間が奪われていない",
+  /* 土台 */
+  "月次の数字が、翌月10営業日以内に出てくる",
+  "出てきた数字を、社長以外の人間が読んで異常に気づける",
+  "契約・稟議・入金の流れが、担当者の記憶ではなくルールで回っている",
+  "「監査法人や投資家に見せられる状態か」と聞かれて即答できる",
+  /* 人 */
+  "社長が1ヶ月不在でも、事業の判断が止まらない",
+  "「この人に任せた」と言える領域が、幹部それぞれに明確にある",
+  "幹部と、業績以外のこと（組織・将来）を定期的に1対1で話している",
+  "いま自分が抱えている仕事のうち、本来は他人がやるべきものを列挙できる",
+  /* 資金と株主 */
+  "メインバンクへの決算説明を、社長が自分の言葉でできている",
+  "今後3年の資金の出入りが見える（いつ・いくら足りなくなるか）",
+  "株主構成と、将来それが問題になりうる点を把握している",
+  "事業承継やM&Aの話が来たときに、誰に相談するか決まっている",
+  /* 次の一手 */
+  "新規事業や投資の判断に、事前に決めた基準がある（撤退条件も含む）",
+  "頭の中にある構想が、誰かに引き継げる形（紙・データ）になっている",
+  "直近1年で、既存業務のやり方をツールやAIで変えた実例がある",
+  "「やらないと決めたこと」を、この1年で1つ以上挙げられる"
+];
+
+var OPTIONS = [
+  {k:"A", t:"当てはまる",          v:3},
+  {k:"B", t:"やや当てはまる",      v:2},
+  {k:"C", t:"あまり当てはまらない", v:1},
+  {k:"D", t:"当てはまらない",      v:0}
+];
+
+var VERDICTS = [
+  {min:60, name:"流れている",       desc:"仕組みが人から独立して動いている状態です。この段階の論点は仕組みの不足ではなく、速度と優先順位。どこに資源を集中させるかの判断が成果を分けます。"},
+  {min:45, name:"一部に淀みがある", desc:"全体としては回っていますが、特定の領域が全体の速度を決めています。一番低い領域をひとつ通すだけで、他の領域の成果も一緒に上がります。"},
+  {min:30, name:"上流で詰まっている", desc:"判断が社長のところに集まり、社長の時間が会社の成長の上限になっている状態です。個々の業務の改善より、判断を手放す順番を決めるほうが先に効きます。"},
+  {min:0,  name:"まだ水路がない",   desc:"仕組みを作る前の段階です。足りないものを数えると気が遠くなりますが、着手する順番さえ決まれば、ここからの変化はいちばん速い段階でもあります。"}
+];
+
+var WEAK = {
+  "方向":[
+    "3年後の像が共有されていないと、今期の予算は前年比の作業になります。社員は「なぜこの数字なのか」を説明されないまま数字を追いかけることになり、未達の理由も毎月ぼやけたままになります。まず着手すべきは精緻な計画づくりではなく、3年後を1枚で言い切ることです。",
+    "方向は描けています。次に効くのは、計画どおりにいかなかったときの代替案を先に用意しておくこと。ズレたときの議論がゼロから始まらなくなり、対応が1ヶ月早くなります。"],
+  "決断":[
+    "会議が「報告の場」になっている状態です。決めることが事前に決まっていないと、集まった時間のほとんどが状況説明に使われ、決定は会議の外に持ち帰られます。アジェンダに「本日決めること」を3つ書く。それだけで翌月から変わります。",
+    "決まる会議にはなっています。次は、決めたことが実行されたかを毎回冒頭で確認する仕組み。決定の質より決定の追跡のほうが、最終的な成果を分けます。"],
+  "土台":[
+    "数字が出るのが遅い、あるいは社長にしか読めない状態です。これだと打ち手が常に手遅れになります。金融機関や投資家との対話も、将来の資本政策の選択肢も、ここが整うまで開きません。着手の順番は、月次の締めを早めるのが先で、精緻化は後です。",
+    "数字と仕組みは回っています。次の論点は、外の目に耐えるかどうか。監査法人や投資家の視点で一度棚卸ししておくと、いざ必要になったときの時間を大きく買えます。"],
+  "人":[
+    "判断が社長に集まっています。この状態では、会社の成長速度の上限が社長の可処分時間そのものになります。権限移譲は人が育ってから始めるものではなく、任せる領域を先に切り出すところから始まります。",
+    "任せる形はできています。次は、幹部と業績以外の話（組織・将来）をする時間を定例に入れること。ここが空いていると、優秀な人ほど静かに離れていきます。"],
+  "資金と株主":[
+    "資金の先が見えていない、あるいは外に説明する言葉を持っていない状態です。資金は足りなくなってから動くと選択肢が消えます。今後3年の資金の出入りを1枚にするところから始めてください。",
+    "説明はできています。次に効くのは、株主構成が将来どこで問題になるかを先に把握しておくこと。承継やM&Aの話は、たいてい準備ができていないタイミングで来ます。"],
+  "次の一手":[
+    "構想が社長の頭の中にあり、判断が都度になっている状態です。基準がないと投資は止めどきを失い、新規事業は撤退の判断が遅れます。始める前に撤退条件を決めておくことが、最も費用対効果の高い一手です。",
+    "動き出す形はあります。次は「やらないと決めたこと」を明示すること。やることリストより、やらないリストのほうが組織の速度を上げます。"]
+};
+
+var ALLHIGH = "6領域すべてが高い水準にあります。この段階の課題は仕組みの不足ではなく、速度と優先順位です。どこに資源を集中させ、何をやめるかの判断が成果を分けます。";
+
+/* ============================================================
+   状態
+   ============================================================ */
+var answers = new Array(24).fill(null);
+var cur = 0;
+
+var $ = function(id){ return document.getElementById(id); };
+function domainOf(i){ return DOMAINS[Math.floor(i/4)]; }
+
+/* ---------- intro cards ---------- */
+(function(){
+  var h = "";
+  for (var i=0;i<DOMAINS.length;i++){
+    h += '<div class="dcard"><div class="tag en">0'+(i+1)+' '+DOMAINS[i].en+'</div>'+
+         '<h3>'+DOMAINS[i].key+'</h3><p>'+DOMAINS[i].desc+'</p></div>';
+  }
+  $("introCards").innerHTML = h;
+})();
+
+/* ---------- quiz ---------- */
+function renderQ(){
+  var d = domainOf(cur);
+  $("pNow").textContent = cur+1;
+  $("pDom").textContent = d.key;
+  $("pBar").style.width = ((cur)/24*100)+"%";
+  $("backBtn").hidden = (cur === 0);
+
+  var h = '<div class="qnum en">Q'+(cur+1<10?"0":"")+(cur+1)+' &nbsp;/&nbsp; '+d.en+'</div>'+
+          '<h2>'+QUESTIONS[cur]+'</h2><div class="opts" role="group" aria-label="回答を選択">';
+  for (var i=0;i<OPTIONS.length;i++){
+    var on = (answers[cur] === OPTIONS[i].v) ? " on" : "";
+    h += '<button type="button" class="opt'+on+'" data-v="'+OPTIONS[i].v+'">'+
+         '<span class="k">'+OPTIONS[i].k+'</span><span>'+OPTIONS[i].t+'</span></button>';
+  }
+  h += '</div>';
+
+  var box = $("qBox");
+  box.innerHTML = h;
+  box.classList.remove("fade");
+  void box.offsetWidth;
+  box.classList.add("fade");
+
+  var btns = box.querySelectorAll(".opt");
+  for (var j=0;j<btns.length;j++){
+    btns[j].addEventListener("click", function(){
+      answers[cur] = parseInt(this.getAttribute("data-v"), 10);
+      var sib = this.parentNode.querySelectorAll(".opt");
+      for (var k=0;k<sib.length;k++) sib[k].classList.remove("on");
+      this.classList.add("on");
+      setTimeout(next, 180);
+    });
+  }
+}
+
+function next(){
+  if (cur < 23){ cur++; renderQ(); window.scrollTo(0,0); }
+  else { showResult(); }
+}
+
+$("startBtn").addEventListener("click", function(){
+  $("intro").hidden = true;
+  $("quiz").hidden = false;
+  cur = 0;
+  renderQ();
+  window.scrollTo(0,0);
+});
+
+$("backBtn").addEventListener("click", function(){
+  if (cur > 0){ cur--; renderQ(); window.scrollTo(0,0); }
+});
+
+document.addEventListener("keydown", function(e){
+  if ($("quiz").hidden) return;
+  var map = {"1":3,"2":2,"3":1,"4":0,"a":3,"b":2,"c":1,"d":0};
+  var key = e.key.toLowerCase();
+  if (map.hasOwnProperty(key)){
+    answers[cur] = map[key];
+    renderQ();
+    setTimeout(next, 180);
+  } else if (e.key === "Backspace" && cur > 0){
+    e.preventDefault(); cur--; renderQ();
+  }
+});
+
+/* ============================================================
+   スコア計算
+   ============================================================ */
+function scores(){
+  var out = [];
+  for (var d=0; d<6; d++){
+    var s = 0;
+    for (var i=d*4; i<d*4+4; i++) s += (answers[i] || 0);
+    out.push(s);
+  }
+  return out;
+}
+function verdictFor(total){
+  for (var i=0;i<VERDICTS.length;i++) if (total >= VERDICTS[i].min) return VERDICTS[i];
+  return VERDICTS[VERDICTS.length-1];
+}
+
+/* ============================================================
+   レーダーチャート（自前SVG・依存なし）
+   ============================================================ */
+var CX = 200, CY = 185, R = 112, MAX = 12;
+
+function pt(i, val){
+  var a = (-90 + i*60) * Math.PI/180;
+  var r = R * (val/MAX);
+  return [CX + r*Math.cos(a), CY + r*Math.sin(a)];
+}
+
+function drawRadar(sc){
+  var svg = $("radar");
+  var NS = "http://www.w3.org/2000/svg";
+  // defs は残して以降を除去
+  var kids = [].slice.call(svg.childNodes);
+  for (var n=0;n<kids.length;n++){
+    var nn = kids[n].nodeName;
+    if (nn !== "defs" && nn !== "title") svg.removeChild(kids[n]);
+  }
+  function el(name, attrs, text){
+    var e = document.createElementNS(NS, name);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    svg.appendChild(e);
+    return e;
+  }
+  function poly(val){
+    var p = [];
+    for (var i=0;i<6;i++){ var q = pt(i, val); p.push(q[0].toFixed(1)+","+q[1].toFixed(1)); }
+    return p.join(" ");
+  }
+  // grid rings
+  [3,6,9,12].forEach(function(v){ el("polygon", {points: poly(v), "class":"ring"}); });
+  // spokes
+  for (var i=0;i<6;i++){
+    var q = pt(i, MAX);
+    el("line", {x1:CX, y1:CY, x2:q[0].toFixed(1), y2:q[1].toFixed(1), "class":"spoke"});
+  }
+  // data area
+  var dp = [];
+  for (var i2=0;i2<6;i2++){ var d2 = pt(i2, sc[i2]); dp.push(d2[0].toFixed(1)+","+d2[1].toFixed(1)); }
+  el("polygon", {points: dp.join(" "), "class":"area"});
+
+  // labels + dots + hit areas
+  for (var i3=0;i3<6;i3++){
+    var lp = pt(i3, MAX + 2.6);
+    var anchor = "middle", dy = 0;
+    if (i3 === 0){ dy = -10; }
+    else if (i3 === 3){ dy = 20; }
+    else if (i3 === 1 || i3 === 2){ anchor = "start"; dy = 5; }
+    else { anchor = "end"; dy = 5; }
+    el("text", {x:lp[0].toFixed(1), y:(lp[1]+dy).toFixed(1), "text-anchor":anchor, "class":"lbl"}, DOMAINS[i3].key);
+    el("text", {x:lp[0].toFixed(1), y:(lp[1]+dy+15).toFixed(1), "text-anchor":anchor, "class":"lblv"}, sc[i3]+"/12");
+
+    var dpz = pt(i3, sc[i3]);
+    var hit = el("circle", {cx:dpz[0].toFixed(1), cy:dpz[1].toFixed(1), r:16, "class":"hit", tabindex:0,
+                            role:"img", "aria-label":DOMAINS[i3].key+" "+sc[i3]+"点 / 12点"});
+    el("circle", {cx:dpz[0].toFixed(1), cy:dpz[1].toFixed(1), r:5, "class":"dot"});
+    (function(idx){
+      function show(ev){
+        var t = $("tip"), r = hit.getBoundingClientRect();
+        t.textContent = DOMAINS[idx].key + "　" + sc[idx] + " / 12";
+        t.style.left = (r.left + r.width/2) + "px";
+        t.style.top  = (r.top + r.height/2) + "px";
+        t.classList.add("on");
+      }
+      function hide(){ $("tip").classList.remove("on"); }
+      hit.addEventListener("mouseenter", show);
+      hit.addEventListener("mouseleave", hide);
+      hit.addEventListener("focus", show);
+      hit.addEventListener("blur", hide);
+      addEventListener("scroll", hide, {passive:true});
+    })(i3);
+  }
+}
+
+/* ============================================================
+   結果表示
+   ============================================================ */
+function showResult(){
+  var sc = scores();
+  var total = sc.reduce(function(a,b){ return a+b; }, 0);
+  var v = verdictFor(total);
+
+  $("quiz").hidden = true;
+  $("result").hidden = false;
+  $("pBar").style.width = "100%";
+
+  $("rScore").textContent = total;
+  $("rName").textContent = v.name;
+  $("rDesc").textContent = v.desc;
+
+  drawRadar(sc);
+
+  // 最弱領域（同点なら先に出てくる領域＝土台に近いほうを優先）
+  var minV = Math.min.apply(null, sc);
+  var wi = sc.indexOf(minV);
+  var bars = "";
+  for (var i=0;i<6;i++){
+    bars += '<div class="r'+(i===wi ? " low" : "")+'">'+
+            '<span class="nm">'+DOMAINS[i].key+'</span>'+
+            '<span class="tr"><i class="fl" data-w="'+(sc[i]/MAX*100)+'"></i></span>'+
+            '<span class="vl">'+sc[i]+'<small> /12</small></span></div>';
+  }
+  $("bars").innerHTML = bars;
+  requestAnimationFrame(function(){
+    var fl = $("bars").querySelectorAll(".fl");
+    for (var i=0;i<fl.length;i++) fl[i].style.width = fl[i].getAttribute("data-w")+"%";
+  });
+
+  if (minV >= 10){
+    $("wTitle").textContent = "全領域が高い水準です";
+    $("wBody").textContent  = ALLHIGH;
+  } else {
+    var band = (minV <= 6) ? 0 : 1;
+    $("wTitle").textContent = "いま最も流れが細い領域 — 「" + DOMAINS[wi].key + "」";
+    $("wBody").textContent  = WEAK[DOMAINS[wi].key][band];
+  }
+
+  window.scrollTo(0,0);
+}
+
+$("retryBtn").addEventListener("click", function(){
+  answers = new Array(24).fill(null);
+  cur = 0;
+  $("result").hidden = true;
+  // ゲートを初期状態に戻す（ボタンの無効化・文言も戻さないと再送信できなくなる）
+  $("gateForm").style.display = "";
+  $("gateDone").style.display = "none";
+  $("g-btn").disabled = false;
+  $("g-btn").textContent = "レポートを受け取る";
+  $("g-note").textContent = "いただいたアドレスはレポートの送付とご連絡にのみ使用します。";
+  $("intro").hidden = false;
+  window.scrollTo(0,0);
+});
+
+/* ============================================================
+   メール取得（Web3Forms）
+   ============================================================ */
+$("dlform").addEventListener("submit", function(e){
+  e.preventDefault();
+  var btn = $("g-btn"), note = $("g-note");
+  var name = $("g-name").value.trim();
+  var mail = $("g-mail").value.trim();
+
+  if (!name || !mail || mail.indexOf("@") < 1){
+    note.textContent = "お名前とEmailをご確認ください。";
+    return;
+  }
+  if (!$("g-agree").checked){
+    note.textContent = "診断結果の送信に同意いただくとレポートをお渡しできます。";
+    return;
+  }
+
+  var sc = scores();
+  var total = sc.reduce(function(a,b){ return a+b; }, 0);
+  var breakdown = DOMAINS.map(function(d,i){ return d.key+" "+sc[i]+"/12"; }).join(" / ");
+
+  btn.disabled = true;
+  btn.textContent = "送信中…";
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {"Content-Type":"application/json", "Accept":"application/json"},
+    body: JSON.stringify({
+      access_key: WEB3FORMS_KEY,
+      subject: "【経営の流れ診断】レポートDL：" + name + "様（" + total + "/72）",
+      from_name: "経営の流れ診断",
+      "お名前": name,
+      "会社名": $("g-company").value.trim(),
+      "email": mail,
+      "総合スコア": total + " / 72",
+      "判定": verdictFor(total).name,
+      "領域別スコア": breakdown,
+      "最も低い領域": DOMAINS[sc.indexOf(Math.min.apply(null, sc))].key,
+      "botcheck": ""
+    })
+  }).then(function(r){ return r.json(); })
+    .then(function(j){
+      if (j && j.success){
+        $("dlLink").setAttribute("href", REPORT_URL);
+        $("gateForm").style.display = "none";
+        $("gateDone").style.display = "block";
+        $("gateDone").scrollIntoView({block:"center"});
+      } else { throw new Error("ng"); }
+    })
+    .catch(function(){
+      note.textContent = "送信に失敗しました。お手数ですが info@streampartners.jp まで直接ご連絡ください。";
+      btn.disabled = false;
+      btn.textContent = "レポートを受け取る";
+    });
+});
+</script>
+</body>
+</html>
