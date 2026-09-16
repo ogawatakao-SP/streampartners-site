@@ -249,6 +249,7 @@ canvas[data-water]{position:absolute;inset:0;width:100%;height:100%;display:bloc
       <div class="btns">
         <a class="b" href="#/service">サービスを見る ↗</a>
         <a class="b go" href="#/contact">無料相談を申し込む</a>
+        <a class="b red" href="/shindan.html">経営の流れ診断（3分・無料）</a>
       </div>
     </div>
     <div class="visual"><canvas data-water="stream" aria-hidden="true"></canvas></div>
@@ -371,6 +372,28 @@ canvas[data-water]{position:absolute;inset:0;width:100%;height:100%;display:bloc
   <canvas data-water="stream2" aria-hidden="true"></canvas>
   <div class="t"><div class="big">CONSULTATION</div><div class="sub">初回1時間、無料でご相談いただけます</div></div>
 </section>
+<section class="sec" id="shindan"><div class="c">
+  <div class="ttl"><div class="big gtext">DIAGNOSIS</div><div class="sub">経営の流れ診断 — 3分・無料</div></div>
+  <div class="two">
+    <div>
+      <h2>あなたの会社は、<br>どこで流れが詰まっているか。</h2>
+      <div class="body">
+        <span>経営がうまく進まないとき、原因は能力でも努力でもなく、どこか一箇所で流れが止まっていることのほうが多いものです。</span>
+        <span>24の問いに答えると、6つの領域がスコアで表示されます。所要3分、その場で結果が出ます。まだご相談の段階ではないという方も、自社の状態を整理する材料としてお使いください。</span>
+      </div>
+      <div class="btns"><a class="b red" href="/shindan.html">診断をはじめる ↗</a></div>
+    </div>
+    <div class="cards" style="grid-template-columns:1fr 1fr;gap:10px">
+      <div class="card" style="padding:20px 22px;gap:4px"><div class="tag">01</div><h3 style="font-size:15px">方向</h3><p style="font-size:11.5px;line-height:1.8">3年後と今期の数字が、つながっているか</p></div>
+      <div class="card" style="padding:20px 22px;gap:4px"><div class="tag">02</div><h3 style="font-size:15px">決断</h3><p style="font-size:11.5px;line-height:1.8">決まる会議になっているか</p></div>
+      <div class="card" style="padding:20px 22px;gap:4px"><div class="tag">03</div><h3 style="font-size:15px">土台</h3><p style="font-size:11.5px;line-height:1.8">数字と仕組みが、人の記憶から独立しているか</p></div>
+      <div class="card" style="padding:20px 22px;gap:4px"><div class="tag">04</div><h3 style="font-size:15px">人</h3><p style="font-size:11.5px;line-height:1.8">社長以外が、判断できるか</p></div>
+      <div class="card" style="padding:20px 22px;gap:4px"><div class="tag">05</div><h3 style="font-size:15px">資金と株主</h3><p style="font-size:11.5px;line-height:1.8">外に説明でき、先が見えているか</p></div>
+      <div class="card" style="padding:20px 22px;gap:4px"><div class="tag">06</div><h3 style="font-size:15px">次の一手</h3><p style="font-size:11.5px;line-height:1.8">構想が形になり、判断基準があるか</p></div>
+    </div>
+  </div>
+</div></section>
+
 <section class="dual">
   <a href="#/contact"><div><div class="big">CONTACT</div><div class="sub">無料相談・お問い合わせ</div><p>会社の概要と、いま気になっていることを一言で。2営業日以内にご連絡します。</p></div><span class="circ">→</span></a>
   <a href="#/contact#partner"><div><div class="big">PARTNERS</div><div class="sub">紹介パートナーの方へ</div><p>税理士・会計事務所、M&amp;A仲介・FAの皆さまへ。顧問先・お客様の相談先の一つとして。</p></div><span class="circ">→</span></a>
@@ -592,6 +615,14 @@ canvas[data-water]{position:absolute;inset:0;width:100%;height:100%;display:bloc
     <div class="step"><div class="k">04</div><h3>ご提案</h3><p>6ヶ月で何を決め、何を動かすかを1枚にまとめてご提案します。ご契約はその後で構いません。</p></div>
   </div>
   <p class="note" style="margin-top:20px">顧問税理士や右腕の方など、いつもの相談相手のご同席を歓迎します。</p>
+  <div class="cards" style="margin-top:40px">
+    <div class="card">
+      <div class="tag">DIAGNOSIS</div>
+      <h3>まだ相談する段階ではない、という方へ</h3>
+      <p>24の問いで自社の状態を6領域のスコアにする「経営の流れ診断」をご用意しています。所要3分・無料で、その場で結果が出ます。ご相談の前の整理にお使いください。</p>
+      <div class="btns" style="margin-top:6px"><a class="b red" href="/shindan.html">経営の流れ診断を受ける ↗</a></div>
+    </div>
+  </div>
 </div></section>
 <section class="sec gray"><div class="c">
   <div class="ttl"><div class="big gtext">FORM</div><div class="sub">お問い合わせ・無料相談のお申し込み</div></div>
@@ -662,7 +693,7 @@ return false;
       <address>Stream Partners<br>代表　小川 隆生<br>Mail: info@streampartners.jp</address>
     </div>
     <div class="cols">
-      <ul><li><a href="#/story">STORY</a></li><li><a href="#/plans">PLANS</a></li><li><a href="#/profile">PROFILE</a></li><li><a href="#/news">NEWS</a></li><li><a href="#/contact">CONTACT</a></li></ul>
+      <ul><li><a href="#/story">STORY</a></li><li><a href="#/plans">PLANS</a></li><li><a href="#/profile">PROFILE</a></li><li><a href="#/news">NEWS</a></li><li><a href="#/contact">CONTACT</a></li><li><a href="/shindan.html">DIAGNOSIS</a></li></ul>
       <ul><li><a href="#/service">SERVICE</a></li><li class="jp"><a href="#/service">中期計画・事業計画</a></li><li class="jp"><a href="#/service">管理体制・IPO準備</a></li><li class="jp"><a href="#/service">事業承継・M&amp;A・新規投資</a></li><li class="jp"><a href="#/service">幹部育成・DX/AI活用</a></li></ul>
     </div>
   </div>
