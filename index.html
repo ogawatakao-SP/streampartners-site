@@ -2,6 +2,15 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J49HYNRWXM"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+// ハッシュルーティングのため自動page_viewは切り、route()から手動で送る
+gtag('config','G-J49HYNRWXM',{send_page_view:false});
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Stream Partners（小川隆生）— 中小オーナー企業の社長に対する「社外経営企画」。中期計画・管理体制・事業承継・M&A・幹部育成・DX/AI活用まで、意思決定の設計・レビュー・進捗管理を月額リテイナーで少数だけお受けします。初回1時間は無料。">
 <meta property="og:title" content="Stream Partners｜経営に、よい流れを。">
@@ -149,6 +158,9 @@ canvas[data-water]{position:absolute;inset:0;width:100%;height:100%;display:bloc
 .prose .phead{font-size:clamp(15.5px,1.45vw,18px);font-weight:900;line-height:1.85;color:#111;margin-top:14px;padding-left:16px;border-left:3px solid var(--p)}
 .prose .phead:first-child{margin-top:0}
 .prose .phead span{display:inline-block}
+.prose .plist{display:flex;flex-direction:column;gap:7px}
+.prose .plist li{position:relative;padding-left:18px}
+.prose .plist li::before{content:"—";position:absolute;left:0;color:var(--p)}
 .h3{font-size:17px;font-weight:900;margin-bottom:8px}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
 .step{background:#fff;padding:28px 26px;position:relative;border-left:3px solid var(--p)}
@@ -695,6 +707,72 @@ return false;
 </div></section>
 </main>
 
+<!-- ======================================================= PRIVACY ======================================================= -->
+<main class="page" data-page="privacy">
+<section class="subhero">
+  <svg class="arcs" viewBox="0 0 600 600" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1" aria-hidden="true"><circle cx="300" cy="300" r="280"/><circle cx="300" cy="300" r="200"/><circle cx="300" cy="300" r="120"/></svg>
+  <div class="c"><div class="big">PRIVACY</div><div class="sub">プライバシーポリシー</div><h1>お預かりした情報の取り扱いについて</h1></div>
+</section>
+<section class="sec"><div class="c">
+  <div class="prose" style="max-width:820px">
+    <p>Stream Partners（以下「当方」といいます）は、本ウェブサイト（https://streampartners.jp）を通じて取得する個人情報を、以下の方針に基づいて取り扱います。</p>
+
+    <h3 class="phead">1. 取得する情報</h3>
+    <p>当方は、以下の情報を取得します。</p>
+    <ul class="plist">
+      <li>お問い合わせフォームにご入力いただいた、お名前・会社名・メールアドレス・ご用件・ご相談内容</li>
+      <li>「経営の流れ診断」のレポートお申し込みにご入力いただいた、お名前・会社名・メールアドレス、および診断結果（総合スコア・6領域のスコア・判定）</li>
+      <li>アクセス解析により自動的に取得される情報（閲覧されたページ、参照元、ブラウザおよびOSの種類、おおよその地域など）。これらは個人を特定するものではありません</li>
+    </ul>
+    <p>診断にご回答いただいた個々の設問への回答そのものは、お客様のブラウザ上でスコアの計算にのみ使用され、当方に送信されることはありません。</p>
+
+    <h3 class="phead">2. 利用目的</h3>
+    <ul class="plist">
+      <li>お問い合わせ・ご相談への回答、および日程の調整</li>
+      <li>お申し込みいただいた資料（レポート）の送付</li>
+      <li>当方のサービスに関するご連絡</li>
+      <li>本ウェブサイトおよびサービスの改善</li>
+    </ul>
+    <p>ご本人の同意なく、上記の目的を超えて利用することはありません。</p>
+
+    <h3 class="phead">3. 第三者への提供</h3>
+    <p>ご本人の同意がある場合、および法令に基づき開示が求められる場合を除き、取得した個人情報を第三者に提供することはありません。</p>
+
+    <h3 class="phead">4. 外部サービスの利用</h3>
+    <p>当方は、フォームの送受信処理およびアクセス状況の把握のため、以下の外部サービスを利用しています。ご入力いただいた内容は、これらのサービスを経由して当方に届きます。</p>
+    <ul class="plist">
+      <li>お問い合わせフォームの送信処理：Formspree, Inc.（アメリカ合衆国）</li>
+      <li>「経営の流れ診断」レポートお申し込みの送信処理：Web3Forms（アメリカ合衆国）</li>
+      <li>アクセス解析：Google LLC（アメリカ合衆国）</li>
+    </ul>
+    <p>各事業者における個人情報の取り扱いは、各社のプライバシーポリシーに基づきます。当方は、取得した情報を上記の利用目的以外に使用しません。</p>
+
+    <h3 class="phead">5. Cookie およびアクセス解析</h3>
+    <p>本ウェブサイトでは、アクセス状況を把握するために Google Analytics 4 を利用しており、Cookie を使用しています。収集されるのは個人を特定しない統計情報です。</p>
+    <p>Cookie の使用を望まれない場合は、お使いのブラウザの設定で無効にしていただくか、Google が提供する「Google アナリティクス オプトアウト アドオン」（https://tools.google.com/dlpage/gaoptout/）をご利用ください。なお Cookie を無効にした場合も、本ウェブサイトの閲覧に支障はありません。</p>
+
+    <h3 class="phead">6. 安全管理措置</h3>
+    <p>取得した個人情報について、漏えい、滅失または毀損の防止その他の安全管理のために、必要かつ適切な措置を講じます。</p>
+
+    <h3 class="phead">7. 開示・訂正・削除のご請求</h3>
+    <p>ご本人からのお求めに応じ、当方が保有する個人情報の開示、訂正、追加、削除、利用停止に応じます。下記の窓口までご連絡ください。ご本人であることを確認のうえ、速やかに対応いたします。</p>
+
+    <h3 class="phead">8. お問い合わせ窓口</h3>
+    <p>Stream Partners<br>代表　小川 隆生<br>Mail：info@streampartners.jp</p>
+    <p class="note">住所につきましては、ご請求に応じて開示いたします。上記のメールアドレスまでご連絡ください。</p>
+
+    <h3 class="phead">9. 本ポリシーの変更</h3>
+    <p>法令の改正や事業内容の変更などに応じて、本ポリシーを変更することがあります。変更後の内容は、本ページに掲載した時点から適用されます。</p>
+
+    <p class="note" style="margin-top:14px">制定日：2026年9月16日</p>
+  </div>
+</div></section>
+<section class="dual">
+  <a href="#/contact"><div><div class="big">CONTACT</div><div class="sub">無料相談・お問い合わせ</div><p>会社の概要と、いま気になっていることを一言で。2営業日以内にご連絡します。</p></div><span class="circ">→</span></a>
+  <a href="#/"><div><div class="big">HOME</div><div class="sub">トップにもどる</div><p>中小オーナー企業・スタートアップの社長のための、社外経営企画です。</p></div><span class="circ">→</span></a>
+</section>
+</main>
+
 <!-- ===== footer ===== -->
 <footer class="footer">
   <div class="top">
@@ -707,7 +785,7 @@ return false;
       <ul><li><a href="#/service">SERVICE</a></li><li class="jp"><a href="#/service">中期計画・事業計画</a></li><li class="jp"><a href="#/service">管理体制・IPO準備</a></li><li class="jp"><a href="#/service">事業承継・M&amp;A・新規投資</a></li><li class="jp"><a href="#/service">幹部育成・DX/AI活用</a></li></ul>
     </div>
   </div>
-  <div class="bottom"><a href="#">プライバシーポリシー</a><span>© 2026 Stream Partners</span></div>
+  <div class="bottom"><a href="#/privacy">プライバシーポリシー</a><span>© 2026 Stream Partners</span></div>
   <a class="up" href="#top" aria-label="トップへ">↑</a>
 </footer>
 
@@ -716,6 +794,11 @@ return false;
   const pages=[...document.querySelectorAll('.page')];
   const h=document.getElementById('hdr');
   const links=[...document.querySelectorAll('#nav a[data-route]')];
+  const TITLES={home:'HOME',story:'STORY',service:'SERVICE',plans:'PLANS',profile:'PROFILE',news:'NEWS',contact:'CONTACT',privacy:'PRIVACY POLICY'};
+  function track(name){
+    if(typeof gtag!=='function')return;
+    gtag('event','page_view',{page_title:(TITLES[name]||name)+'｜Stream Partners',page_location:location.href});
+  }
   function route(){
     const m=(location.hash||'#/').match(/^#\/([a-z]*)(?:#(.+))?$/);
     const name=(m&&m[1])||'home';const anchor=m&&m[2];
@@ -723,6 +806,7 @@ return false;
     pages.forEach(p=>{const on=p.dataset.page===name;p.classList.toggle('active',on);if(on)found=true;});
     if(!found)pages.forEach(p=>p.classList.toggle('active',p.dataset.page==='home'));
     links.forEach(a=>a.classList.toggle('current',a.dataset.route===name));
+    track(found?name:'home');
     h.classList.remove('open');
     if(anchor){const el=document.getElementById(anchor);if(el){el.scrollIntoView();return;}}
     if(location.hash==='#top'){window.scrollTo(0,0);return;}
